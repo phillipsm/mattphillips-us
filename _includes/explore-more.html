@@ -1,9 +1,9 @@
+{% if page.url != '/' %}
 <div class="explore-more-container">
-  {% if page.url != '/index.html' %}
   <div class="title-container">
       <p class="title section-title">Explore more</p>
   </div>
-  {% end %}
+  {% endif %}
 
   {% if page.url != '/perma.html' %}
   <div class="perma-tile tile">
@@ -48,13 +48,16 @@
   {% if page.url != '/illustrations.html' %}
   <div class="illustration-tile tile">
     <a href="/illustrations">
-      <img src="/assets/images/ill-tile.png"
+      <img src="/assets/images/illustrations/ill-tile.png"
           alt="Illustration of a wall mounted light"
-          srcset="/assets/images/ill-tile@2x.png 2x">
+          srcset="/assets/images/illustrations/ill-tile@2x.png 2x">
       </a>
       <p class="tile-title"><a href="/illustrations">Illustrations</a></p>
       <p>A ragtag gallery of illustrations and graphics from recent projects.</p>
       <p class="tile-desc">Illustrator. Graphic designer.</p>
   </div>
   {% endif %}
+
+{% if page.url != '/' %}
 </div>
+{% endif %}
