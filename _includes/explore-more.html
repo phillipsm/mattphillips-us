@@ -1,7 +1,9 @@
 <div class="explore-more-container">
+  {% if page.url != '/index.html' %}
   <div class="title-container">
       <p class="title section-title">Explore more</p>
   </div>
+  {% end %}
 
   {% if page.url != '/perma.html' %}
   <div class="perma-tile tile">
@@ -23,8 +25,8 @@
           alt="Screen capture of many thin, small lines layered on top of one another"
           srcset="/assets/images/algo-art-tile@2x.png 2x">
 
-      <p class="tile-title">Algorithmic Art</p>
-      <p>A focused look at the technical details required to display dynamic visualzations across devices.</p>
+      <p class="tile-title">Drawing with algorithms</p>
+      <p>A technical deconstruction of the layers used to make dynamic visualizations.</p>
       <p class="tile-desc">JavaScript Developer.</p>
   </div>
   {% endif %}
