@@ -19,13 +19,14 @@
   </div>
   {% endif %}
 
-  {% if page.url != '/algo-art.html' %}
+  {% if page.url != '/drawing-algos.html' %}
   <div class="algo-tile tile">
-      <img src="/assets/images/algo-art-tile.png"
-          alt="Screen capture of many thin, small lines layered on top of one another"
-          srcset="/assets/images/algo-art-tile@2x.png 2x">
-
-      <p class="tile-title">Drawing with algorithms</p>
+      <a href="/drawing-algos" class="tile-link">
+        <img src="/assets/images/drawing-algos/drawing-algos-tile.png"
+            alt="Screen capture of many thin, small lines layered on top of one another"
+            srcset="/assets/images/drawing-algos/drawing-algos-tile@2x.png 2x">
+      </a>
+      <p class="tile-title"><a href="/drawing-algos">Drawing with algorithms</a></p>
       <p>A technical deconstruction of the layers used to make dynamic visualizations.</p>
       <p class="tile-desc">JavaScript Developer.</p>
   </div>

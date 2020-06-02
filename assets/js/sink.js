@@ -8,7 +8,7 @@ const sink_sketch = ( sketch ) => {
 
     sketch.preload = () => {
 
-        canvas_container_element = document.getElementById('canvas-container-a');
+        canvas_container_element = document.getElementById('canvas-container-c');
 
     };
 
@@ -18,7 +18,7 @@ const sink_sketch = ( sketch ) => {
 
         // Remove our placeholder image after we've loaded the dom
         // and are ready to draw. Then, create our cavnas
-        placeholder_img = document.querySelector('#canvas-container-a img');
+        placeholder_img = document.querySelector('#canvas-container-c img');
         if ( placeholder_img ) {
             placeholder_img.remove();
         }
@@ -79,7 +79,7 @@ const sink_sketch = ( sketch ) => {
 
 };
 
-new p5(sink_sketch, 'canvas-container-a');
+new p5(sink_sketch, 'canvas-container-c');
 
 
 // If our fullscren button is clicked, we toggle fullscreen mode
