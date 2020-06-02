@@ -228,6 +228,13 @@ canvas {
 
 // Common Explore more grid items
 
+.explore-more-container {
+  .title-container {
+    padding-top: 3rem;
+    border-top: 1px solid #999;
+  }
+}
+
 .title-container {
   grid-area: title-container;
 }
