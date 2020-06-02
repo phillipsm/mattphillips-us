@@ -1,0 +1,104 @@
+---
+---
+
+<!doctype html>
+<html ang="en-US" class="">
+  <head>
+    {% include common-head.html %}
+
+    <link rel="stylesheet" href="/assets/css/styles.css">
+  </head>
+  <body class="port-landing">
+    <header>
+    {% include common-header.html %}
+    </header>
+
+    <div class="container">
+        <div class="about-img">
+            <img src="/assets/images/double-exposure-still-low-opacity.gif">
+        </div>
+
+        <div class="intro-text">
+            <p>Hello!</p>
+            <p>My name is Matt Phillips, I'm an Interaction Designer and Computer Scientist living in the San Francisco Bay Area.</p>
+            <p>I currently work as an independent consultant, but am seeking more - I want to join your team full-time, and build wonderful things together.</p>
+        </div>
+
+        <div id="work" class="work-text section-start">
+          <p class="title section-title">Work</p>
+          <p>Listed here, you'll find examples of work I've produced - a broad selection of sketches, wireframes, user research, visual assets, code and prototypes.</p>
+        </div>
+        <div class="perma-tile tile">
+
+          <a href="/perma">
+            <img src="/assets/images/perma-case-study-tile.png"
+                alt="Perma.cc logo"
+                srcset="/assets/images/perma-case-study-tile@2x.png 2x">
+          </a>
+          <p class="tile-title"><a href="/perma">Perma Case Study</a></p>
+            <p>A case study that walks through the process used to define interfaces in this Harvard University web archiving service.</p>
+            <p class="tile-desc">Interaction Designer. Full Stack Developer. Product Designer.</p>
+        </div>
+
+        <div class="algo-tile tile">
+            <img src="/assets/images/algo-art-tile.png"
+                alt="Screen capture of many thin, small lines layered on top of one another"
+                srcset="/assets/images/algo-art-tile@2x.png 2x">
+
+            <p class="tile-title">Algorithmic drawings</p>
+            <p>A deconstruction of techniques and layers used to make dynamic visualizations.</p>
+            <p class="tile-desc">JavaScript Developer.</p>
+        </div>
+
+        <div class="openbooth-tile tile">
+
+            <a href="/openbooth">
+              <img src="/assets/images/openbooth/openbooth-tile.jpg"
+                alt="Perma.cc logo"
+                srcset="/assets/images/openbooth/openbooth-tile@2x.jpg 2x">
+            </a>
+            <p class="tile-title"><a href="/openbooth">OpenBooth <br class="mobile-break">Case Study</a></p>
+            <p>A journey through the process used to define the form and features of this occupiable furniture product.</p>
+            <p class="tile-desc">Product Designer. Industrial Designer.</p>
+        </div>
+
+        <div class="illustration-tile tile">
+          <a href="/illustrations">
+            <img src="/assets/images/ill-tile.png"
+                alt="Perma.cc logo"
+                srcset="/assets/images/ill-tile@2x.png 2x">
+            </a>
+            <p class="tile-title"><a href="/illustrations">Illustrations</a></p>
+            <p>A ragtag gallery of illustrations and graphics from recent projects.</p>
+            <p class="tile-desc">Illustrator. Graphic designer.</p>
+        </div>
+
+
+        <div id ="about" class="about-desc section-start">
+          <p class="title section-title">About</p>
+          <p>I'm excited to explore new ways of thinking and doing at the intersection of human factors and technology - I hope to setup outposts in recently charted lands.</p>
+          <p>I currently work independently through <a href="https://publicgood.studio/" target="_blank">Public Good Studio</a>, and spent much of the last decade in the <a href="https://lil.law.harvard.edu/" target="_blank">Harvard Library Innovation Lab</a>.</p>
+          <p>I hold a B.S. in Computer Science from Mansfield University of Pennsylvania and a M.S. in Computer Science from Virginia Tech.</p>
+          <p>Bicycles, computers, horseplay, style and libraries consume most of my thoughts.</p>
+          <p>You can find more in my <a href="/assets/docs/matt-phillips-resume.pdf" target="_blank">résumé</a>.</p>
+        </div>
+
+        <div id="contact" class="contact-desc section-start">
+          <p class="title section-title">Contact</p>
+            <p>
+              I live in Menlo Park, California and use <a href="https://www.linkedin.com/in/this-matt-phillips/" target="_blank">LinkedIn</a>, <a href="https://angel.co/u/this-matt-phillips" target="_blank">AngelList</a>, <a href="https://github.com/phillipsm" target="_blank">GitHub</a> and <a href="https://www.instagram.com/this_phillips/" target="_blank">Instagram</a>.
+            </p>
+            <p>
+              Drop me an email at <a href="mailto:matt@publicgood.studio">matt@publicgood.studio</a>, or send me a text, <a href="tel:1-650-666-7241">650-666-7241</a>.
+            </p>
+        </div>
+
+    </div>
+    {% include common-footer.html %}
+    <script src="/assets/js/vendor/smooth-scroll.polyfills.min.js"></script>
+
+    <script>
+        var scroll = new SmoothScroll('a[href*="#"]');
+    </script>
+  </body>
+</html>

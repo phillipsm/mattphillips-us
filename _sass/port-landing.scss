@@ -1,0 +1,117 @@
+.port-landing {
+
+    .container {
+      max-width: 1100px;
+      display: grid;
+      grid-column-gap: 4rem;
+      grid-row-gap: 8rem;
+      background-color: #fff;
+      margin: 0 auto;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-areas:
+      "intro-text intro-text about-img about-img"
+      "work-text work-text work-text ."
+      "perma-tile perma-tile algo-tile algo-tile"
+      "openbooth-tile openbooth-tile illustration-tile illustration-tile"
+      "about-desc about-desc about-desc ."
+      "contact-desc contact-desc . .";
+    }
+
+    .intro-text {
+        grid-area: intro-text;
+        align-self: end;
+        margin-top: 0rem;
+    }
+
+    .work-text {
+          grid-area: work-text;
+    }
+
+    .about-desc {
+        grid-area: about-desc;
+
+
+    }
+
+    .about-img {
+      grid-area: about-img;
+      align-self: end;
+    }
+
+    .contact-desc {
+        grid-area: contact-desc;
+    }
+
+    .title {
+        margin-bottom: 2rem;
+    }
+
+    .tile {
+      margin-top: 0;
+    }
+
+    .section-start {
+      margin-top: 6rem;
+    }
+
+
+    p {
+      margin-bottom: 0;
+      margin-top: 2em;
+    }
+
+
+
+
+
+    @media only screen and (max-width: 900px) {
+
+        .container {
+            grid-template-columns: repeat(2, 1fr);
+            grid-column-gap: 1em;
+            grid-row-gap: 1em;
+            grid-template-areas:
+            "about-img about-img"
+            "intro-text intro-text"
+            "work-text work-text"
+            "perma-tile perma-tile"
+            "algo-tile algo-tile"
+            "openbooth-tile openbooth-tile"
+            "illustration-tile illustration-tile"
+            "about-desc about-desc"
+            "contact-desc contact-desc";
+        }
+
+        .perma-tile {
+          margin-top: 4rem;
+          margin-bottom: 4rem;
+        }
+
+        .algo-tile, .openbooth-tile {
+          margin-bottom: 4rem;
+        }
+
+        .tile-desc {
+          margin-bottom: 4rem;
+          margin-top: 2rem;
+        }
+
+        .tile-desc:last-of-type {
+          margin-bottom: 0;
+        }
+
+        .tile-title {
+          margin-top: 2rem;
+        }
+        .section-title {
+          margin-top: 5rem;
+        }
+
+        .section-start {
+          margin-top: 2rem;
+        }
+
+
+    }
+
+}

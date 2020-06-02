@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+  <head>
+    {% include common-head.html %}
+
+    <link rel="stylesheet" href="/assets/css/styles.css">
+
+    {% for item in page.local_page_js %}
+        <script src="/assets/js/{{ item }}"></script>
+    {% endfor %}
+  </head>
+  <body>
+    <header>
+      {% include common-header.html %}
+    </header>
+    {{ content }}
+  </body>
+</html>
