@@ -12,11 +12,8 @@
       "overview-img overview-img overview-img overview-img overview-img"
       "overview-text overview-text overview-text . ."
       "img-a-desc-container img-a-desc-container img-a img-a img-a"
-      "fullscreen-a fullscreen-a img-a img-a img-a"
       "img-b-desc-container img-b-desc-container img-b img-b img-b"
-      "fullscreen-b fullscreen-b img-b img-b img-b"
       "img-c-desc-container img-c-desc-container img-c img-c img-c"
-      "fullscreen-c fullscreen-c img-c img-c img-c"
       "tools-head tools-head tools-head tools-head tools-head"
       "tools-text tools-text tools-text . .";
     }
@@ -42,10 +39,7 @@
     .img-a-desc-container
     {
       grid-area: img-a-desc-container;
-    }
-
-    .fullscreen-a {
-      grid-area: fullscreen-a;
+      align-self: end;
     }
 
     .img-b {
@@ -54,10 +48,7 @@
 
     .img-b-desc-container {
       grid-area: img-b-desc-container;
-    }
-
-    .fullscreen-b {
-      grid-area: fullscreen-b;
+      align-self: end;
     }
 
 
@@ -68,10 +59,7 @@
     .img-c-desc-container
     {
       grid-area: img-c-desc-container;
-    }
-
-    .fullscreen-c {
-      grid-area: fullscreen-c;
+      align-self: end;
     }
 
 
@@ -141,13 +129,10 @@
           "overview-text"
           "img-a"
           "img-a-desc-container"
-          "fullscreen-a"
           "img-b"
           "img-b-desc-container"
-          "fullscreen-b"
           "img-c"
           "img-c-desc-container"
-          "fullscreen-c"
           "tools-head"
           "tools-text";
         }
@@ -159,7 +144,7 @@
         }
 
         .title {
-          margin-bottom: 0;
+          margin: 0;
         }
 
         .tile {
@@ -170,7 +155,9 @@
           margin-top: 6rem;
         }
 
-
+        .tools-head, .tools-text {
+          margin: 0;
+        }
 
 
 

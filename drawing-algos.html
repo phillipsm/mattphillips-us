@@ -32,65 +32,67 @@ local_page_js:
             Drawing with algorithms is powerful - setup the guardrails and let the machine run. It doesn't grow weary.
         </p>
         <p>
-          Applications are broad. Patterns can be beautiful in print, and are a natural fit serving as backgrounds, screen art and information rich display systems.          </p>
+          Applications are broad. Patterns can be beautiful in print, and are a natural fit serving as backgrounds, screen art and information rich display systems.
+        </p>
+        <p class="end-element">
+          Below, you'll find a few recent examples I made while seeking backgrounds for a wall-mounted display.
+        </p>
     </div>
 
-    <div class="img-a">
+    <div class="img-a tile">
         <div id="canvas-container-a">
             <img src="/assets/images/drawing-algos/placeholder.png" class="placeholder-image">
         </div>
     </div>
 
     <div class="img-a-desc-container">
-        <p class="img-desc">
-            Keep moving forward
+        <p>
+          A wobbly line is drawn across the HTML Canvas as a circle steadily moves on the x axis and bounces a 80 times per second on the y axis.
+        </p>
+        <p class="end-element">
+          View <a href="https://publicgood.studio/projects/patterns/keep-moving" target="_blank">fullscreen</a> and then checkout <a href="https://github.com/phillipsm/mattphillips-us/blob/master/assets/js/keep-moving.js" target="_blank">the source</a>.
         </p>
     </div>
 
-    <div class="fullscreen-a">
-        <p class="img-desc">
-            <a href="/projects/patterns/keep-moving" target="_blank">Fullscreen</a>
-        </p>
-    </div>
 
-
-    <div class="img-b">
+    <div class="img-b tile">
         <div id="canvas-container-b">
             <img src="/assets/images/drawing-algos/placeholder.png" class="placeholder-image">
         </div>
     </div>
 
     <div class="img-b-desc-container">
-        <p class="img-desc">
-            A message in the noise
+        <p>
+            In this moving image, we see a message in the noise. It scrolls. What does it say?
+        </p>
+        <p>
+          There are two things that get drawn to this canvas - the red horizontal lines every 10 milliseconds and a letter every one second.
+        </p>
+        <p class="end-element">
+          View <a href="https://publicgood.studio/projects/patterns/monday" target="_blank">fullscreen</a> and then checkout <a href="https://github.com/phillipsm/mattphillips-us/blob/master/assets/js/monday.js" target="_blank">the source</a>.
         </p>
     </div>
 
-    <div class="fullscreen-b">
-        <p class="img-desc">
-            <a href="/projects/patterns/monday" target="_blank">Fullscreen</a>
-        </p>
-    </div>
 
 
-
-    <div class="img-c">
+    <div class="img-c tile">
         <div id="canvas-container-c">
             <img src="/assets/images/drawing-algos/placeholder.png" class="placeholder-image">
         </div>
     </div>
 
     <div class="img-c-desc-container">
-        <p class="img-desc">
-            A collection of short lines
-        </p>
+      <p>
+          Here, we have the simplest animated visual - it's one line between two random points, 80 times per second.
+      </p>
+      <p>
+        The <a href="https://p5js.org/reference/#/p5/random" target="_blank">p5.js random function</a> makes it easy to pull a color from a list of colors for each line drawn.
+      </p>
+      <p class="end-element">
+        View <a href="https://publicgood.studio/projects/patterns/sink" target="_blank">fullscreen</a> and then checkout <a href="https://github.com/phillipsm/mattphillips-us/blob/master/assets/js/monday.js" target="_blank">the source</a>.
+      </p>
     </div>
 
-    <div class="fullscreen-c">
-        <p class="img-desc">
-            <a href="/projects/patterns/sink" target="_blank">Fullscreen</a>
-        </p>
-    </div>
 
 
 
@@ -98,11 +100,8 @@ local_page_js:
         <p class="title section-title">Tools</p>
     </div>
     <div class="tools-text">
-      <p>
-      You'll find CodePen links next to each visualization, and you can browse the source for this portfolio site on <a href="https://github.com/phillipsm/mattphillips-us" target="_blank">GitHub</a>.
-      </p>
         <p>
-          Vanilla ES6 JavaScript was used draw on HTML Canvas elements using the p5.js library.
+          I used the JavaScript visualization library, <a href="https://p5js.org/" target="_blank">p5.js</a> to manage logic and to interact with the &lt;canvas&gt; element. The common <a href="https://p5js.org/learn/program-flow.html" target="_blank">.setup() and .draw() pattern</a> makes it quick spin up something interesting.
         </p>
     </div>
 </div> <!-- / container -->
