@@ -26,7 +26,8 @@
       ". process-five-text process-five-text process-five-text ."
       ". process-five-img process-five-img process-five-img process-five-img"
       "post-process-head post-process-text post-process-text process-complete-img process-complete-img"
-      "role-head role-text role-text role-text .";
+      "role-head role-text role-text role-text ."
+      "tools-head tools-text tools-text tools-text .";
     }
 
     .overview-head {
@@ -171,6 +172,14 @@
         grid-area: role-text;
     }
 
+    .tools-head {
+        grid-area: tools-head;
+    }
+
+    .tools-text {
+        grid-area: tools-text;
+    }
+
 
     video {
       border: .08rem solid #cccccc;
@@ -256,7 +265,9 @@
             "post-process-text post-process-text"
             "process-complete-img process-complete-img"
             "role-head role-head"
-            "role-text role-text";
+            "role-text role-text"
+            "tools-head tools-head"
+            "tools-text tools-text";
         }
 
         .overview-img {
