@@ -43,6 +43,7 @@ p {
 h1 {
   font-family: 'Walsheim Medium', sans-serif;
   font-size: 2.8em;
+  line-height: 1.2em;
 }
 
 h2 {
@@ -91,7 +92,33 @@ ul {
   margin-bottom: 2rem;
 }
 
-// Nav container include
+.img-desc {
+  margin: 1em 2em 2em 2em;
+  font-family: 'Walsheim Thin', sans-serif;
+  font-size: .85em;
+  text-align: center;
+}
+
+.framed {
+  border: 1px solid #ccc;
+  margin: 0;
+  padding: .5em;
+}
+
+.mobile-break {
+    display: none;
+}
+
+.end-element {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+
+///////
+// start
+// nav container include
+///////
 .nav-container {
   max-width: 1100px;
   padding-top: 2rem;
@@ -99,14 +126,14 @@ ul {
 
   display: grid;
   grid-column-gap: 1em;
-  grid-row-gap: 6em;
+  grid-row-gap: 2em;
   grid-template-columns: repeat(4, 1fr);
   grid-template-areas:
   "site-title site-title site-title main-nav";
 }
 
 .nav-container:first-of-type {
-  margin-bottom: 12rem;
+  margin-bottom: 14rem;
 }
 
 .main-nav {
@@ -137,43 +164,16 @@ ul {
   }
 
 }
-// /Nav container include
+///////
+// end
+// nav container include
+///////
 
 
-
-.tile-title {
-  font-family: 'Walsheim Medium', sans-serif;
-  font-size: 1.4em;
-  margin-bottom: 2rem;
-  margin-top: 2rem;
-}
-
-.img-desc {
-  margin: 1em 2em 2em 2em;
-  font-family: 'Walsheim Thin', sans-serif;
-  font-size: .85em;
-  text-align: center;
-}
-
-.tile {
-  margin-top: 4rem;
-}
-
-.tile-desc {
-  margin-top: 2rem;
-  margin-bottom: 0;
-  font-size: 1em;
-  font-family: 'Walsheim Thin', sans-serif;
-}
-
-.project-title {
-  font-family: 'Walsheim Medium', sans-serif;
-  font-size:2.4em;
-  margin: 2rem 0 2rem 0;
-}
-
-
-// Common Explore more grid items
+///////
+// start
+// explore more include
+///////
 
 .explore-more-container {
   .title-container {
@@ -201,32 +201,44 @@ ul {
 .illustration-tile {
   grid-area: illustration-tile;
 }
-// /Explore more
 
-.mobile-break {
-    display: none;
+.tile {
+  margin-top: 4rem;
 }
 
-.framed {
-  border: 1px solid #ccc;
-  margin: 0;
-  padding: .5em;
+.tile-title {
+  font-family: 'Walsheim Medium', sans-serif;
+  font-size: 1.4em;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
 }
 
-
-
-.end-element {
+.tile-desc {
+  margin-top: 2rem;
   margin-bottom: 0;
-  padding-bottom: 0;
+  font-size: 1em;
+  font-family: 'Walsheim Thin', sans-serif;
 }
 
-
+.project-title {
+  font-family: 'Walsheim Medium', sans-serif;
+  font-size:2.4em;
+  margin: 2rem 0 2rem 0;
+}
+///////
+// end
+// explore more include
+///////
 
 
 @media only screen and (max-width: 900px) {
 
   body {
-    font-size: 1.7rem;
+    font-size: 1.6rem;
+  }
+
+  h2 {
+    font-size: 1.7em;
   }
 
   .nav-container {
@@ -234,34 +246,44 @@ ul {
 
     .main-nav {
       font-size: 1.0em;
-
-      p {
-        margin: .15em;
-      }
     }
   }
 
   .nav-container:first-of-type {
-    margin-top: -1rem;
+    margin-top: -2rem;
     margin-bottom: 8rem;
   }
 
-  .project-title {
-    font-size: 1.8em;
+  .section-title {
+    margin-top: 4rem;
+    margin-bottom: 2rem;
   }
 
-  .title {
-    font-size: 1.6em;
+  .tile {
+    margin-top: 0;
   }
-  .img-desc {
-    text-align: center;
+
+  .tile-title {
+    font-size: 1.2em;
   }
+  ///////
+  // start
+  // mobile
+  // explore more include
+  ///////
 
   .explore-more-container {
     .title-container {
       margin-bottom: 2rem;
     }
   }
+
+  ///////
+  // end
+  // mobile
+  // explore more include
+  ///////
+
 
   .mobile-break {
     display: block;

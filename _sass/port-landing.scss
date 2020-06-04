@@ -2,14 +2,13 @@
 
     .container {
       max-width: 1100px;
+      margin: 0 auto;
+
       display: grid;
       grid-column-gap: 4rem;
       grid-row-gap: 2rem;
-      background-color: #fff;
-      margin: 0 auto;
       grid-template-columns: repeat(4, 1fr);
       grid-template-areas:
-
       "about-img about-img intro-text intro-text"
       "work-text work-text work-text ."
       "perma-tile perma-tile algo-tile algo-tile"
@@ -33,21 +32,17 @@
 
     .about-img {
       grid-area: about-img;
-      justify-self: center;
     }
 
     .contact-desc {
         grid-area: contact-desc;
     }
 
-    .title {
-        margin-bottom: 2rem;
-    }
-
     .openbooth-tile, .illustrations-tile {
       margin-bottom: 0;
       padding-bottom: 0;
     }
+
 
 
     @media only screen and (max-width: 900px) {
@@ -68,36 +63,25 @@
             "contact-desc contact-desc";
         }
 
-        .perma-tile {
-          margin-top: 4rem;
-          margin-bottom: 4rem;
+        .about-img {
+          margin-bottom: 1rem;
         }
 
-        .algo-tile, .openbooth-tile {
-          margin-bottom: 4rem;
+        .perma-tile {
+          margin-top: 2rem;
+        }
+
+        .perma-tile, .algo-tile, .openbooth-tile {
+          margin-bottom: 2rem;
         }
 
         .tile-desc {
           margin-bottom: 4rem;
-          margin-top: 2rem;
         }
 
         .tile-desc:last-of-type {
           margin-bottom: 0;
         }
-
-        .tile-title {
-          margin-top: 2rem;
-        }
-        .section-title {
-          margin-top: 5rem;
-        }
-
-        .section-start {
-          margin-top: 2rem;
-        }
-
-
     }
 
 }
