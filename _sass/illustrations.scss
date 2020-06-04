@@ -2,15 +2,15 @@
 
     .container {
       max-width: 1100px;
-      display: grid;
-      grid-column-gap: 2em;
-      grid-row-gap: 6em;
-      background-color: #fff;
       margin: 0 auto;
+
+      display: grid;
+      grid-column-gap: 4rem;
+      grid-row-gap: 8rem;
       grid-template-columns: repeat(5, 1fr);
       grid-template-areas:
       "overview-img overview-img overview-img overview-img overview-img"
-      "overview-text overview-text overview-text . ."
+      "overview-text overview-text overview-text overview-text ."
       "garbagio garbagio garbagio climbing climbing"
       "screwdrivers screwdrivers screwdrivers double-digit double-digit-partner"
       "ktr ktr ktr wheelbarrow wheelbarrow";
@@ -22,7 +22,10 @@
 
     .overview-text {
         grid-area: overview-text;
-        margin-top: -8rem;
+        h2 {
+          margin-bottom: 2rem;
+          margin-top: -2rem;
+        }
     }
 
     .ktr {
@@ -76,7 +79,7 @@
         }
 
         .overview-img {
-          margin-bottom: 6rem;
+          margin-bottom: 4rem;
         }
 
         .overview-text {
