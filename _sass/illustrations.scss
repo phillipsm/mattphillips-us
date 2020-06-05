@@ -30,8 +30,8 @@
 
     .ktr {
       grid-area: ktr;
-      align-self: end;
       justify-self: center;
+      align-self: start;
     }
 
     .garbagio {
@@ -46,11 +46,12 @@
 
     .double-digit {
       grid-area: double-digit;
+      justify-self: end;
     }
 
     .double-digit-partner {
       grid-area: double-digit-partner;
-      justify-self: end;
+      justify-self: start;
     }
 
     .wheelbarrow {
