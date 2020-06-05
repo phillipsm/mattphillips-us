@@ -61,15 +61,15 @@ p {
   line-height: 1.3em;
 
   a:link {
-      border-bottom: .13rem solid $cherry;
+      border-bottom: thin solid $cherry;
 
   }
   a:hover {
-      border-bottom: .2rem solid $cherry;
+      border-bottom: thin solid $cherry;
   }
 
   a:visited {
-      border-bottom: .13rem solid $cherry;
+      border-bottom: thin solid $cherry;
   }
 }
 
@@ -91,8 +91,6 @@ ul {
 
 .framed {
   border: 1px solid #ccc;
-  margin: 0;
-  padding: .5em;
 }
 
 .mobile-break {
