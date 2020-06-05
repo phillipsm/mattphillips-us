@@ -54,27 +54,22 @@ h2 {
 a, a:link, a:hover, a:active, a:visited, a:focus {
     text-decoration:none;
     border-bottom: none;
+    color: $text_color;
 }
 
 p {
   line-height: 1.3em;
-  a, a:link, a:hover, a:active, a:visited, a:focus {
-      text-decoration:none;
-  }
 
   a:link {
-      border-bottom: .02em solid $cherry;
-      color: $text_color;
+      border-bottom: .17rem solid $cherry;
 
   }
   a:hover {
-      color: #444;
-      border-bottom: .1em solid $cherry;
+      border-bottom: .3rem solid $cherry;
   }
 
   a:visited {
-      border-bottom: .02em solid $cherry;
-      color: $text_color;
+      border-bottom: .17rem solid $cherry;
   }
 }
 
@@ -151,12 +146,6 @@ ul {
   grid-area: site-title;
   justify-self: right;
   align-self: center;
-
-  a, a:link, a:hover, a:active, a:visited, a:focus {
-      text-decoration:none;
-      color: $text_color;
-  }
-
 }
 ///////
 // end
