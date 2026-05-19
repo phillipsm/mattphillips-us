@@ -1,0 +1,267 @@
+/* ---------- reset ---------- */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body { line-height: 1; }
+ol, ul { list-style: none; }
+table { border-collapse: collapse; border-spacing: 0; }
+
+/* ---------- fonts ---------- */
+@font-face {
+  font-family: "Walsheim Thin";
+  src: url("/assets/fonts/GT-Walsheim-Thin.woff2") format("woff2"),
+       url("/assets/fonts/GT-Walsheim-Thin.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Walsheim Light";
+  src: url("/assets/fonts/GT-Walsheim-Light.woff2") format("woff2"),
+       url("/assets/fonts/GT-Walsheim-Light.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Walsheim Regular";
+  src: url("/assets/fonts/GT-Walsheim-Regular.woff2") format("woff2"),
+       url("/assets/fonts/GT-Walsheim-Regular.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Walsheim Medium";
+  src: url("/assets/fonts/GT-Walsheim-Medium.woff2") format("woff2"),
+       url("/assets/fonts/GT-Walsheim-Medium.woff") format("woff");
+  font-display: swap;
+}
+
+/* ---------- palette + base ---------- */
+:root {
+  --text-color: #2d2b26;
+  --cherry: #ee2348;
+}
+
+html { font-size: 13px; }
+
+body {
+  background-color: #fff;
+  color: var(--text-color);
+  font-size: 1.7rem;
+  font-family: 'Walsheim Regular', sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 2rem;
+}
+
+p { margin: 0 0 1em 0; line-height: 1.3em; }
+
+h1 {
+  font-family: 'Walsheim Medium', sans-serif;
+  font-size: 2.8em;
+  line-height: 1.2em;
+}
+
+h2 {
+  font-family: 'Walsheim Medium', sans-serif;
+  font-size: 2.1em;
+}
+
+a, a:link, a:hover, a:active, a:visited, a:focus {
+  text-decoration: none;
+  border-bottom: none;
+  color: var(--text-color);
+}
+
+p a:link,
+p a:hover,
+p a:visited {
+  border-bottom: thin solid var(--cherry);
+}
+
+img { max-width: 100%; height: auto; }
+
+.img-desc {
+  margin: 1em 2em;
+  font-family: 'Walsheim Thin', sans-serif;
+  font-size: .85em;
+  text-align: center;
+}
+
+.framed { border: 1px solid #ccc; }
+.mobile-break { display: none; }
+.end-element { margin-bottom: 0; padding-bottom: 0; }
+
+/* ---------- nav-container ---------- */
+.nav-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-top: 2rem;
+  display: grid;
+  grid-column-gap: 1em;
+  grid-row-gap: 2em;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas: "site-title site-title site-title main-nav";
+}
+
+.nav-container:first-of-type {
+  margin-bottom: 14rem;
+}
+
+.main-nav {
+  grid-area: main-nav;
+  justify-self: left;
+  align-self: center;
+  font-family: 'Walsheim Light', sans-serif;
+  padding-left: 2rem;
+}
+
+.main-nav ul li { padding: .25em; }
+.main-nav ul li p { margin: 0; }
+
+.site-title {
+  grid-area: site-title;
+  justify-self: right;
+  align-self: center;
+}
+
+/* ---------- tiles (explore-more) ---------- */
+.explore-more-container h2 {
+  border-top: 1px solid #999;
+  padding-top: 2rem;
+}
+
+.title-container { grid-area: title-container; }
+.perma-tile { grid-area: perma-tile; }
+.algo-tile { grid-area: algo-tile; }
+.openbooth-tile { grid-area: openbooth-tile; }
+.illustration-tile { grid-area: illustration-tile; }
+
+.tile { margin-top: 4rem; }
+
+.tile-title {
+  font-family: 'Walsheim Medium', sans-serif;
+  font-size: 1.4em;
+  margin: 2rem 0;
+}
+
+.tile-desc {
+  margin-top: 2rem;
+  margin-bottom: 0;
+  font-size: 1em;
+  font-family: 'Walsheim Thin', sans-serif;
+}
+
+.project-title {
+  font-family: 'Walsheim Medium', sans-serif;
+  font-size: 2.4em;
+  margin: 2rem 0;
+}
+
+/* ---------- home (port-landing) ---------- */
+.port-landing .container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-column-gap: 4rem;
+  grid-row-gap: 2rem;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas:
+    "about-img about-img intro-text intro-text"
+    "work-text work-text work-text ."
+    "perma-tile perma-tile algo-tile algo-tile"
+    "openbooth-tile openbooth-tile illustration-tile illustration-tile"
+    "about-desc about-desc about-desc ."
+    "contact-desc contact-desc . .";
+}
+
+.port-landing .intro-text { grid-area: intro-text; align-self: end; }
+.port-landing .work-text { grid-area: work-text; }
+.port-landing .about-desc { grid-area: about-desc; }
+.port-landing .about-img { grid-area: about-img; }
+.port-landing .contact-desc { grid-area: contact-desc; }
+
+.port-landing .openbooth-tile,
+.port-landing .illustrations-tile {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.port-landing .section-title {
+  margin-top: 8rem;
+  margin-bottom: 2rem;
+}
+
+/* ---------- responsive ---------- */
+@media only screen and (max-width: 900px) {
+  body { font-size: 1.6rem; }
+  h2 { font-size: 1.6em; }
+
+  .nav-container {
+    font-size: 1.2rem;
+    margin-top: 6rem;
+  }
+  .nav-container .main-nav { font-size: 1.0em; }
+  .nav-container:first-of-type {
+    margin-top: -2rem;
+    margin-bottom: 8rem;
+  }
+
+  .section-title {
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+  }
+
+  .tile { margin-top: 0; }
+  .tile-title { font-size: 1.2em; }
+
+  .explore-more-container .title-container {
+    padding-top: 0;
+    margin-top: -1rem;
+  }
+
+  .mobile-break { display: block; }
+
+  .port-landing .container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 1em;
+    grid-row-gap: 1em;
+    grid-template-areas:
+      "about-img about-img"
+      "intro-text intro-text"
+      "work-text work-text"
+      "perma-tile perma-tile"
+      "algo-tile algo-tile"
+      "openbooth-tile openbooth-tile"
+      "illustration-tile illustration-tile"
+      "about-desc about-desc"
+      "contact-desc contact-desc";
+  }
+
+  .port-landing .about-img { margin-bottom: 1rem; }
+  .port-landing .perma-tile { margin-top: 2rem; }
+  .port-landing .perma-tile,
+  .port-landing .algo-tile,
+  .port-landing .openbooth-tile { margin-bottom: 2rem; }
+
+  .port-landing .tile-desc { margin-bottom: 4rem; }
+  .port-landing .tile-desc:last-of-type { margin-bottom: 0; }
+}

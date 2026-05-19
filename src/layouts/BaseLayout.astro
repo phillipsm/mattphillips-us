@@ -1,0 +1,62 @@
+---
+interface Props {
+  title?: string;
+  bodyClass?: string;
+  frontmatter?: { title?: string };
+}
+const { title, bodyClass, frontmatter } = Astro.props;
+const pageTitle = title ?? frontmatter?.title ?? 'Matt Phillips';
+---
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="icon" href="/assets/images/favicon-32.png" sizes="32x32" />
+    <link rel="icon" href="/assets/images/favicon-192.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="/assets/images/favicon-180.png" />
+    <meta name="msapplication-TileImage" content="/assets/images/favicon-270.png" />
+    <title>{pageTitle}</title>
+    <meta
+      name="description"
+      content="The portfolio site of Matt Phillips — an Interaction Designer and Computer Scientist living in the San Francisco Bay Area."
+    />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body class={bodyClass}>
+    <header>
+      <div class="nav-container">
+        <div class="site-title">
+          <h1><a href="/">Matt Phillips</a></h1>
+        </div>
+        <div class="main-nav">
+          <nav>
+            <ul>
+              <li><p><a href="/#work">Work</a></p></li>
+              <li><p><a href="/#about">About</a></p></li>
+              <li><p><a href="/#contact">Contact</a></p></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <slot />
+
+    <footer>
+      <div class="nav-container">
+        <div class="site-title"></div>
+        <div class="main-nav">
+          <nav>
+            <ul>
+              <li><p><a href="/#work">Work</a></p></li>
+              <li><p><a href="/#about">About</a></p></li>
+              <li><p><a href="/#contact">Contact</a></p></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
