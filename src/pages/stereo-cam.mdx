@@ -1,0 +1,48 @@
+---
+layout: ../layouts/BaseLayout.astro
+title: Stereoscopic Camera — Matt Phillips
+---
+
+<div class="case-study">
+
+# Stereoscopic Camera
+
+<p class="lede">An investigation in digital stereoscopic photography.</p>
+
+<img src="/assets/stereo-cam/stereo-cam-proj.jpg" alt="The stereoscopic camera in action — three sheets of acrylic sandwiching a four-camera circuit." />
+<p class="img-desc">Three sheets of acrylic sandwiching a four-camera circuit.</p>
+
+## The premise
+
+We see in stereo. Two eyes, two slightly offset images, a brain that fuses them into something rich with depth and texture. Cameras can see the same way — they just need more lenses.
+
+This camera has four. They fire simultaneously when the shutter is pressed, capturing four images of the same moment from four slightly different vantage points. On paper, those frames could be combined with [lenticular printing](https://en.wikipedia.org/wiki/Lenticular_printing). On the web, an animated GIF gets you something similar — a flickering, parallax-rich view of an ordinary scene.
+
+<div class="screenshot-grid">
+  <img src="/assets/stereo-cam/table-blue.gif" alt="Animated stereo view, blue cast" />
+  <img src="/assets/stereo-cam/table-orange.gif" alt="Animated stereo view, orange cast" />
+  <img src="/assets/stereo-cam/table-purple.gif" alt="Animated stereo view, purple cast" />
+  <img src="/assets/stereo-cam/table-green.gif" alt="Animated stereo view, green cast" />
+</div>
+<p class="img-desc">Multicolor view of the day's workspace — four passes through the same moment.</p>
+
+## How it's built
+
+The prototype is four cameras wired to an Arduino microcontroller, writing to an SD card on shutter release. The enclosure is a three-layer acrylic sandwich, laser-cut: front plate with four lens holes, middle plate to seat the electronics, back plate exposing the shutter button and battery.
+
+<img src="/assets/stereo-cam/camera-proto-2-front.jpg" alt="Front of the camera — four lens holes in acrylic." />
+<p class="img-desc">Front plate. Four holes line up with the camera modules behind it.</p>
+
+<img src="/assets/stereo-cam/camera-proto-2-side.jpg" alt="Side view of the acrylic and electronics sandwich." />
+<p class="img-desc">Side view of the acrylic and electronics sandwich.</p>
+
+<img src="/assets/stereo-cam/camera-proto-2-back.jpg" alt="Back of the camera — exposed circuit, battery, and shutter release." />
+<p class="img-desc">Back plate. Circuit, battery, and shutter release exposed.</p>
+
+## Build your own
+
+The Arduino source is on [GitHub](https://github.com/phillipsm/stereo-cam) under a dual MIT/GPL license, along with the [laser-cutting templates](https://github.com/phillipsm/stereo-cam/tree/master/templates) for the acrylic plates.
+
+<p class="role-line"><strong>Role.</strong> Engineer. Designer. Maker.</p>
+
+</div>

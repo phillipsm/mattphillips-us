@@ -150,10 +150,12 @@ img { max-width: 100%; height: auto; }
 }
 
 .title-container { grid-area: title-container; }
+.dog-mode-tile { grid-area: dog-mode-tile; }
+.mcp-tile { grid-area: mcp-tile; }
 .perma-tile { grid-area: perma-tile; }
-.algo-tile { grid-area: algo-tile; }
 .openbooth-tile { grid-area: openbooth-tile; }
-.illustration-tile { grid-area: illustration-tile; }
+.stereo-cam-tile { grid-area: stereo-cam-tile; }
+.older-tile { grid-area: older-tile; }
 
 .tile { margin-top: 4rem; }
 
@@ -187,8 +189,9 @@ img { max-width: 100%; height: auto; }
   grid-template-areas:
     "about-img about-img intro-text intro-text"
     "work-text work-text work-text ."
-    "perma-tile perma-tile algo-tile algo-tile"
-    "openbooth-tile openbooth-tile illustration-tile illustration-tile"
+    "dog-mode-tile dog-mode-tile mcp-tile mcp-tile"
+    "perma-tile perma-tile openbooth-tile openbooth-tile"
+    "stereo-cam-tile stereo-cam-tile older-tile older-tile"
     "about-desc about-desc about-desc ."
     "contact-desc contact-desc . .";
 }
@@ -199,8 +202,8 @@ img { max-width: 100%; height: auto; }
 .port-landing .about-img { grid-area: about-img; }
 .port-landing .contact-desc { grid-area: contact-desc; }
 
-.port-landing .openbooth-tile,
-.port-landing .illustrations-tile {
+.port-landing .stereo-cam-tile,
+.port-landing .older-tile {
   margin-bottom: 0;
   padding-bottom: 0;
 }
@@ -248,20 +251,120 @@ img { max-width: 100%; height: auto; }
       "about-img about-img"
       "intro-text intro-text"
       "work-text work-text"
+      "dog-mode-tile dog-mode-tile"
+      "mcp-tile mcp-tile"
       "perma-tile perma-tile"
-      "algo-tile algo-tile"
       "openbooth-tile openbooth-tile"
-      "illustration-tile illustration-tile"
+      "stereo-cam-tile stereo-cam-tile"
+      "older-tile older-tile"
       "about-desc about-desc"
       "contact-desc contact-desc";
   }
 
   .port-landing .about-img { margin-bottom: 1rem; }
-  .port-landing .perma-tile { margin-top: 2rem; }
+  .port-landing .dog-mode-tile { margin-top: 2rem; }
+  .port-landing .dog-mode-tile,
+  .port-landing .mcp-tile,
   .port-landing .perma-tile,
-  .port-landing .algo-tile,
-  .port-landing .openbooth-tile { margin-bottom: 2rem; }
+  .port-landing .openbooth-tile,
+  .port-landing .stereo-cam-tile { margin-bottom: 2rem; }
 
   .port-landing .tile-desc { margin-bottom: 4rem; }
   .port-landing .tile-desc:last-of-type { margin-bottom: 0; }
+}
+
+/* ---------- case study pages ---------- */
+.case-study {
+  max-width: 760px;
+  margin: 0 auto;
+  padding-bottom: 6rem;
+}
+
+.case-study h1 { margin-bottom: 0.5rem; }
+
+.case-study h2 {
+  margin-top: 4rem;
+  margin-bottom: 1.5rem;
+}
+
+.case-study p { margin-bottom: 1.2em; line-height: 1.5em; }
+
+.case-study .lede {
+  font-family: 'Walsheim Light', sans-serif;
+  font-size: 1.6em;
+  line-height: 1.3em;
+  margin-bottom: 2.5rem;
+}
+
+.case-study .app-meta {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.case-study .app-icon {
+  width: 96px;
+  height: 96px;
+  border-radius: 22%;
+  flex-shrink: 0;
+}
+
+.case-study .app-meta-text p { margin-bottom: 0.4em; }
+.case-study .app-meta-text p:last-child { margin-bottom: 0; }
+
+.case-study .cta {
+  font-family: 'Walsheim Medium', sans-serif;
+  border-bottom: thin solid var(--cherry);
+}
+
+.case-study ul {
+  list-style: disc;
+  padding-left: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+.case-study ul li {
+  margin-bottom: 0.6em;
+  line-height: 1.4em;
+}
+
+.case-study .screenshot-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin: 2.5rem 0 3rem;
+}
+
+.case-study .screenshot-grid img {
+  width: 100%;
+  border-radius: 14px;
+  display: block;
+}
+
+.case-study > img {
+  display: block;
+  width: 100%;
+  margin-top: 2rem;
+  border-radius: 8px;
+}
+
+.case-study > img + .img-desc { margin-top: 0.5rem; }
+
+.case-study .placeholder {
+  font-family: 'Walsheim Thin', sans-serif;
+  font-style: italic;
+  opacity: 0.65;
+}
+
+.case-study .role-line {
+  margin-top: 3rem;
+  font-family: 'Walsheim Light', sans-serif;
+  opacity: 0.7;
+}
+
+@media only screen and (max-width: 700px) {
+  .case-study .screenshot-grid { grid-template-columns: repeat(2, 1fr); }
+  .case-study .app-meta { flex-direction: column; align-items: flex-start; gap: 1rem; }
+  .case-study .lede { font-size: 1.4em; }
 }
