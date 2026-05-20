@@ -287,6 +287,22 @@ img { max-width: 100%; height: auto; }
   margin-bottom: 1.5rem;
 }
 
+.case-study h3 {
+  font-family: 'Walsheim Medium', sans-serif;
+  font-size: 1.4em;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+.case-study video {
+  display: block;
+  width: 100%;
+  margin-top: 2rem;
+  border-radius: 8px;
+}
+
+.case-study em { font-style: italic; }
+
 .case-study p { margin-bottom: 1.2em; line-height: 1.5em; }
 
 .case-study .lede {
