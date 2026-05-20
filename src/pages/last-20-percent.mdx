@@ -1,0 +1,69 @@
+---
+layout: ../layouts/BaseLayout.astro
+title: The Last 20% — Matt Phillips
+description: Notes on shipping Dog Mode with Claude Opus 4.6 — the workflow that worked, the wall I hit, and the small MCP tool that catches design-system drift.
+---
+
+<div class="case-study">
+
+# The Last 20%
+
+Dog Mode is an app I built at Moon Creative Lab over the past several weeks with Hannah, an entrepreneur in residence who arrived with a simple idea: Google Home, but for your dog. We started with hardware — smart diffusers, environmental controls. Then we pivoted to something more immediate: a single tap that sets your lights, temperature, blinds, and audio to conditions that keep your dog calm and comfortable while you're away.
+
+I've built mobile apps before, but not recently. What gave me the confidence to just do it this time was Claude Opus 4.6. So I did.
+
+<div class="visual-placeholder">
+  <span class="visual-label">Visual 1 · to be added</span>
+  <p class="visual-desc">Dog Mode App Store screenshots — 3-4 screens side by side, clean white background, device frames. Show the main activation screen and one or two feature screens. This is the "here's the real thing" moment.</p>
+</div>
+
+## The wall
+
+The first time I handed Claude a full screen mockup and asked it to build, the result was slop. Technically functional, visually degraded — like a photocopy of a photocopy. The subtlety was gone. Everything that made the Figma mockup crisp had been averaged out in translation.
+
+The fix was throttling. Instead of feeding the whole screen, I started feeding slices — literal screen grabs of sections of the mockup. A navigation bar. A card component. A settings row. Scoped, specific, buildable. The quality came back immediately.
+
+That's when I understood what I was actually doing. I wasn't using AI to design. I was using my design skills to define what good looked like in Figma, my engineering judgment to break the implementation into digestible pieces, and AI to execute each piece with precision. The AI was fast and capable. I was the one with taste and context.
+
+<div class="visual-placeholder">
+  <span class="visual-label">Visual 2 · to be added</span>
+  <p class="visual-desc">Side-by-side comparison. Left: a Dog Mode Figma mockup frame with visible crop/slice lines showing how it was divided into sections — annotate with numbers 1, 2, 3. Right: the corresponding built screen in the app. Caption: "Figma mockup sliced into sections for prompting / finished screen in production."</p>
+</div>
+
+## The methodology
+
+The workflow has two phases.
+
+The first phase gets you to 80%. Start with high-fidelity Figma mockups — not wireframes, not sketches. Resolved designs where the hard decisions are already made. Build the base application shell first, then populate each screen in sections, feeding the AI one slice at a time. Each prompt includes a screenshot of exactly the piece you're building, nothing more. This is how you keep the AI from averaging out your intent.
+
+The second phase is where most people stop and ship. I didn't want to.
+
+The last 20% is where consistency lives — the spacing that's almost right, the type size that's close but not yours, the color that's a few points off the palette. These aren't bugs. They're drift. And drift is invisible until you're close enough to the finish line to feel it but not quite see it.
+
+## The linter
+
+I built a small MCP tool to see it.
+
+It takes a screenshot of any Dog Mode screen, reads my design system spec — a plain-language file that defines my spacing scale, typography, colors, and component rules — and returns an annotated image showing every place the rendered output drifts from the spec. Spacing violations highlighted in amber. Color mismatches in red. Pixel values labeled so there's no ambiguity about what needs fixing and by how much.
+
+<div class="visual-placeholder">
+  <span class="visual-label">Visual 3 · to be added</span>
+  <p class="visual-desc">The linter output — a Dog Mode screen with semi-transparent amber and red overlays on spacing and color violations. Small pill labels showing actual vs. expected values. E.g. "20px → 16px" or "off scale." This is your hero visual and the most novel thing in the essay. Make it look clean and surgical, not cluttered.</p>
+</div>
+
+The insight behind it is simple: if you can write down what good looks like, you can teach an AI to find where things fall short. The hard part isn't the tool. The hard part is having enough taste to define the standard in the first place.
+
+A note on approach: if you're building for web, the Figma MCP is worth your time — it gives AI real design data rather than pixel inference and reduces drift at the source. For React Native iOS, that pipeline isn't mature yet. Screenshots and a well-written spec file get you further, faster, with more control over the build.
+
+<div class="visual-placeholder">
+  <span class="visual-label">Visual 4 · to be added</span>
+  <p class="visual-desc">A clean screenshot of the DESIGN.md file — just enough to show it's plain language, readable, specific. Typography section, spacing scale, one component rule. Shows the "taste made explicit" idea without overwhelming.</p>
+</div>
+
+## What I learned
+
+The thing nobody talks about with AI-assisted development is that the quality of your output is a direct function of the quality of your input — not just the prompt, but the judgment behind it. Knowing how to scope a prompt is an engineering skill. Knowing what crisp looks like is a design skill. The AI has neither.
+
+I didn't use AI to make assets. I built a system around AI that could translate product intent into working software, then catch the places where that translation drifted.
+
+</div>
