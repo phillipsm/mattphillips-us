@@ -1,7 +1,7 @@
 ---
 layout: ../layouts/BaseLayout.astro
 title: The Last 20% — Matt Phillips
-description: Notes on shipping Dog Mode with Claude Opus 4.6 — the workflow that worked, the wall I hit, and the small MCP tool that catches design-system drift.
+description: Notes on shipping Dog Mode with Claude Opus 4.6 — the methodology that got me to 80%, and DriftCheck, the visual linter that got me through the last 20%.
 ogImage: /og-last-20-percent.jpg
 ---
 
@@ -9,62 +9,63 @@ ogImage: /og-last-20-percent.jpg
 
 # The Last 20%
 
-Dog Mode is an app I built at Moon Creative Lab over the past several weeks with Hannah, an entrepreneur in residence who arrived with a simple idea: Google Home, but for your dog. We started with hardware — smart diffusers, environmental controls. Then we pivoted to something more immediate: a single tap that sets your lights, temperature, blinds, and audio to conditions that keep your dog calm and comfortable while you're away.
+Dog Mode is an app I built at Moon Creative Lab over the past several weeks with [Hannah Franklin](mailto:hannah.franklin@mooncreativelab.com), an Entrepreneur in Residence who arrived with a one-line idea: Google Home, but for your dog. We started with hardware — smart scent diffusers and Smart Home controllers — then pivoted to something more immediate: a single tap on a phone that sets your lights, temperature, blinds, and audio to the conditions a dog finds soothing while its person is at the office.
 
-I've built mobile apps before, but not recently. What gave me the confidence to just do it this time was Claude Opus 4.6. So I did.
-
-<div class="visual-placeholder">
-  <span class="visual-label">Visual 1 · to be added</span>
-  <p class="visual-desc">Dog Mode App Store screenshots — 3-4 screens side by side, clean white background, device frames. Show the main activation screen and one or two feature screens. This is the "here's the real thing" moment.</p>
+<div class="screenshot-grid">
+  <img src="/assets/dog-mode/IMG_3189.PNG" alt="Dog Mode app screen" />
+  <img src="/assets/dog-mode/IMG_3190.PNG" alt="Dog Mode app screen" />
+  <img src="/assets/dog-mode/IMG_3192.PNG" alt="Dog Mode app screen" />
+  <img src="/assets/dog-mode/IMG_3193.PNG" alt="Dog Mode app screen" />
 </div>
+<p class="img-desc">The four core screens of the Dog Mode iOS app.</p>
 
-## The wall
+## The slice
 
-The first time I handed Claude a full screen mockup and asked it to build, the result was slop. Technically functional, visually degraded — like a photocopy of a photocopy. The subtlety was gone. Everything that made the Figma mockup crisp had been averaged out in translation.
+The first time I handed Claude a full-screen mockup and asked it to build, the result was slop. Functional, in the way a photocopy of a photocopy is functional: the shapes were correct, the labels were where they belonged, but the subtlety — the relationship between type sizes, the breath between elements, the specific shade of blue that had taken an afternoon to choose — had been averaged away. Whatever made the Figma mockup feel intentional was gone.
 
-The fix was throttling. Instead of feeding the whole screen, I started feeding slices — literal screen grabs of sections of the mockup. A navigation bar. A card component. A settings row. Scoped, specific, buildable. The quality came back immediately.
-
-That's when I understood what I was actually doing. I wasn't using AI to design. I was using my design skills to define what good looked like in Figma, my engineering judgment to break the implementation into digestible pieces, and AI to execute each piece with precision. The AI was fast and capable. I was the one with taste and context.
+The fix turned out to be smaller portions. Instead of feeding the whole screen, I started feeding slices: literal screen grabs of sections of the mockup. A navigation bar. A card. A settings row. Scoped, specific, buildable. Quality came back immediately.
 
 <div class="visual-placeholder">
   <span class="visual-label">Visual 2 · to be added</span>
   <p class="visual-desc">Side-by-side comparison. Left: a Dog Mode Figma mockup frame with visible crop/slice lines showing how it was divided into sections — annotate with numbers 1, 2, 3. Right: the corresponding built screen in the app. Caption: "Figma mockup sliced into sections for prompting / finished screen in production."</p>
 </div>
 
-## The methodology
+What I was actually doing, I realized, was not using AI to design. I was using my design skills to define what good looked like in Figma, my engineering judgment to break the implementation into digestible pieces, and AI to execute each piece with precision. The model was fast and capable. The taste, the structure, the order of operations — those were mine.
 
-The workflow has two phases.
+This is the workflow that gets you to 80%. The remaining 20% is harder, and it took me longer to see clearly.
 
-The first phase gets you to 80%. Start with high-fidelity Figma mockups — not wireframes, not sketches. Resolved designs where the hard decisions are already made. Build the base application shell first, then populate each screen in sections, feeding the AI one slice at a time. Each prompt includes a screenshot of exactly the piece you're building, nothing more. This is how you keep the AI from averaging out your intent.
+## The drift
 
-The second phase is where most people stop and ship. I didn't want to.
+The last 20% is where consistency lives — the spacing that's almost right, the type size that's close but not yours, the color that's a few points off the palette. These aren't bugs. They are drift. Drift is invisible until you're close enough to the finish line to feel it but not quite see it, and once you can see it, you can never unsee it.
 
-The last 20% is where consistency lives — the spacing that's almost right, the type size that's close but not yours, the color that's a few points off the palette. These aren't bugs. They're drift. And drift is invisible until you're close enough to the finish line to feel it but not quite see it.
+So I built a tool to see it for me. I call it [DriftCheck](/driftcheck).
 
-## The linter
-
-I built a small MCP tool to see it.
-
-It takes a screenshot of any Dog Mode screen, reads my design system spec — a plain-language file that defines my spacing scale, typography, colors, and component rules — and returns an annotated image showing every place the rendered output drifts from the spec. Spacing violations highlighted in amber. Color mismatches in red. Pixel values labeled so there's no ambiguity about what needs fixing and by how much.
-
-<div class="visual-placeholder">
-  <span class="visual-label">Visual 3 · to be added</span>
-  <p class="visual-desc">The linter output — a Dog Mode screen with semi-transparent amber and red overlays on spacing and color violations. Small pill labels showing actual vs. expected values. E.g. "20px → 16px" or "off scale." This is your hero visual and the most novel thing in the essay. Make it look clean and surgical, not cluttered.</p>
+<div style="display: flex; gap: 32px; align-items: stretch; margin: 2.5rem 0 3rem;">
+  <div style="flex: 1; min-width: 0; display: flex; flex-direction: column;">
+    <img src="/assets/driftcheck/activity-clean.png" alt="Reference activity screen" style="width: 100%; display: block; border: 1px solid rgba(0, 0, 0, 0.08);" />
+    <p class="img-desc" style="margin-top: 1em;">Reference — matches the spec</p>
+  </div>
+  <div style="flex: 1; min-width: 0; display: flex; flex-direction: column;">
+    <img src="/assets/driftcheck/activity-drift.png" alt="Activity screen with drift highlighted" style="width: 100%; display: block; border: 1px solid rgba(0, 0, 0, 0.08);" />
+    <p class="img-desc" style="margin-top: 1em;">Output — two drifts flagged</p>
+  </div>
 </div>
 
-The insight behind it is simple: if you can write down what good looks like, you can teach an AI to find where things fall short. The hard part isn't the tool. The hard part is having enough taste to define the standard in the first place.
+DriftCheck is the half of this story I'd be happiest to talk about. It runs two ways: as a standalone CLI you point at any screenshot and `design.md`, or as an MCP server a coding agent calls inline as part of its own dev loop. Either way, it returns an annotated image — translucent amber strokes over each region that has drifted — plus a JSON report of the same findings. A non-zero exit code on drift makes the same tool work in CI.
 
-A note on approach: if you're building for web, the Figma MCP is worth your time — it gives AI real design data rather than pixel inference and reduces drift at the source. For React Native iOS, that pipeline isn't mature yet. Screenshots and a well-written spec file get you further, faster, with more control over the build.
+The insight underneath is embarrassingly simple. If you can write down what good looks like, you can teach a machine to flag where things fall short. The hard part isn't the tool. The hard part is having enough taste to define the standard in the first place, and the discipline to put it on paper.
 
-<div class="visual-placeholder">
-  <span class="visual-label">Visual 4 · to be added</span>
-  <p class="visual-desc">A clean screenshot of the DESIGN.md file — just enough to show it's plain language, readable, specific. Typography section, spacing scale, one component rule. Shows the "taste made explicit" idea without overwhelming.</p>
-</div>
+<video muted autoplay loop playsinline>
+  <source src="/assets/last-20-percent/design-md.mp4" type="video/mp4" />
+</video>
+<p class="img-desc">The Dog Mode design.md — what good looks like, written down.</p>
+
+There is something pleasing about handing a coding agent a checklist of every place it has cut a corner. The model, for its part, doesn't mind. It corrects, re-screenshots, hands the new image back to the linter, and continues until the report comes back empty. It can run a hundred small revisions before lunch. The work that used to die quietly in design review — the half-pixel adjustments, the type-ramp violations no one quite has the energy to flag — now gets caught in the loop where the code is being written, before it has time to harden.
 
 ## What I learned
 
-The thing nobody talks about with AI-assisted development is that the quality of your output is a direct function of the quality of your input — not just the prompt, but the judgment behind it. Knowing how to scope a prompt is an engineering skill. Knowing what crisp looks like is a design skill. The AI has neither.
+The quality of an AI-assisted build is a direct function of the quality of the input — not just the prompt, but the judgment behind it. Knowing how to scope a prompt is an engineering skill. Knowing what crisp looks like is a design skill. The model has neither.
 
-I didn't use AI to make assets. I built a system around AI that could translate product intent into working software, then catch the places where that translation drifted.
+I didn't use AI to make assets. I built a system around AI that could translate product intent into working software, and then catch the places where the translation drifted. Dog Mode shipped. [DriftCheck](/driftcheck) is open source.
 
 </div>

@@ -27,18 +27,18 @@ Below is the Activity screen from Dog Mode. The reference on the left matches th
 
 <div style="display: flex; gap: 32px; align-items: stretch; margin: 2.5rem 0 3rem;">
   <div style="flex: 1; min-width: 0; display: flex; flex-direction: column;">
-    <img src="/assets/driftcheck/activity-clean.png" alt="Reference activity screen" style="width: 100%; display: block;" />
-    <p class="img-desc" style="margin-top: auto;">Reference — matches the spec</p>
+    <img src="/assets/driftcheck/activity-clean.png" alt="Reference activity screen" style="width: 100%; display: block; border: 1px solid rgba(0, 0, 0, 0.08);" />
+    <p class="img-desc" style="margin-top: 1em;">Reference — matches the spec</p>
   </div>
   <div style="flex: 1; min-width: 0; display: flex; flex-direction: column;">
-    <img src="/assets/driftcheck/activity-drift.png" alt="Activity screen with drift highlighted" style="width: 100%; display: block;" />
-    <p class="img-desc" style="margin-top: auto;">Output — two drifts flagged</p>
+    <img src="/assets/driftcheck/activity-drift.png" alt="Activity screen with drift highlighted" style="width: 100%; display: block; border: 1px solid rgba(0, 0, 0, 0.08);" />
+    <p class="img-desc" style="margin-top: 1em;">Output — two drifts flagged</p>
   </div>
 </div>
 
 ## Two interfaces
 
-DriftCheck runs as a **CLI** for one-shot or CI use, and as an **[MCP](https://modelcontextprotocol.io/) server** so a coding agent (Claude Code, Cursor) can call it inline as part of its own dev loop: edit screen → screenshot → driftcheck → read findings → re-edit → repeat. The model never has to guess what the design system requires — it can just ask.
+DriftCheck runs as a **CLI** for one-shot or CI use, and as an **[MCP](https://modelcontextprotocol.io/) server** so a coding agent (Claude Code, Cursor) can call it inline as part of its own dev loop: edit a screen, take a screenshot, run DriftCheck, read the findings, re-edit, and repeat until the report comes back clean. The model never has to guess what the design system requires — it can just ask.
 
 ## A small thing I'm proud of
 

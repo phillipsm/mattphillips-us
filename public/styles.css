@@ -453,15 +453,16 @@ body:not(.port-landing) footer:hover {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
-  margin: 2.5rem 0 3rem;
+  margin: 2.5rem 0 4.5rem;
 }
 
 .case-study .screenshot-grid:has(+ .img-desc) { margin-bottom: 0; }
-.case-study .screenshot-grid + .img-desc { margin-top: 0.5rem; }
+.case-study .screenshot-grid + .img-desc { margin-top: 1em; }
 
 .case-study .screenshot-grid img {
   width: 100%;
   display: block;
+  border: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .case-study > img {
@@ -478,7 +479,7 @@ body:not(.port-landing) footer:hover {
   margin-bottom: 2rem;
 }
 
-.case-study > img + .img-desc { margin-top: 0.5rem; }
+.case-study > img + .img-desc { margin-top: 1em; }
 
 .case-study .placeholder {
   font-family: 'Walsheim Thin', sans-serif;
