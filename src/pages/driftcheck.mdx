@@ -1,0 +1,52 @@
+---
+layout: ../layouts/BaseLayout.astro
+title: DriftCheck — Matt Phillips
+description: An open-source visual linter and MCP server that catches design-system drift in AI-assisted UI work.
+---
+
+<div class="case-study">
+
+# DriftCheck
+
+<p class="lede">A visual linter that catches design-system drift as AI coding assistants write UI code.</p>
+
+<img src="/assets/driftcheck/driftcheck-tile@2x.png" alt="DriftCheck" style="border-radius: 0;" />
+
+## Why I built it
+
+I built DriftCheck alongside [Dog Mode](/dog-mode), a production iOS app I shipped with AI coding tools doing most of the engineering. They were excellent at moving features forward, but on their own would quietly invent new spacing values, repaint with off-brand colors, and reintroduce styles I'd already consolidated. Catching that in code review worked, but it was slow and demoralizing. DriftCheck pushes consistency-checking into the loop where code is being written: the model hands it a screenshot and the project's <a href="https://github.com/google-labs-code/design.md" target="_blank" rel="noopener"><code>design.md</code></a>, and gets back a structured report of where the implementation has drifted — each finding with the expected value, actual value, and a one-line fix.
+
+## How it works
+
+DriftCheck runs an Anthropic Claude vision model against your screenshot, compares it to a plain-Markdown `design.md`, and returns the original image with translucent highlighter strokes over each drifted region plus a legend listing each finding's expected value, actual value, and suggested fix. A JSON report carries the same findings as structured data, and a non-zero exit code on drift makes the same tool work in CI.
+
+## In practice
+
+Below is the Activity screen from Dog Mode. The reference on the left matches the spec. The right is a drifted version run through DriftCheck — the linter caught both injected issues: the "ALL ACTIVATIONS" header set in all-caps instead of Title Case, and the human-triggered activity row painted in Bold Blue (`#2563EB`, reserved for interactive elements) instead of the spec's Dusty Blue (`#7EBADA`).
+
+<div style="display: flex; gap: 32px; align-items: stretch; margin: 2.5rem 0 3rem;">
+  <div style="flex: 1; min-width: 0; display: flex; flex-direction: column;">
+    <img src="/assets/driftcheck/activity-clean.png" alt="Reference activity screen" style="width: 100%; display: block;" />
+    <p class="img-desc" style="margin-top: auto;">Reference — matches the spec</p>
+  </div>
+  <div style="flex: 1; min-width: 0; display: flex; flex-direction: column;">
+    <img src="/assets/driftcheck/activity-drift.png" alt="Activity screen with drift highlighted" style="width: 100%; display: block;" />
+    <p class="img-desc" style="margin-top: auto;">Output — two drifts flagged</p>
+  </div>
+</div>
+
+## Two interfaces
+
+DriftCheck runs as a **CLI** for one-shot or CI use, and as an **[MCP](https://modelcontextprotocol.io/) server** so a coding agent (Claude Code, Cursor) can call it inline as part of its own dev loop: edit screen → screenshot → driftcheck → read findings → re-edit → repeat. The model never has to guess what the design system requires — it can just ask.
+
+## A small thing I'm proud of
+
+Vision models are good at *what* is wrong but unreliable at *where* on tall mobile screenshots. DriftCheck does a two-pass call: pass one finds the drifts on the full image, pass two crops a region around each rough bbox and asks the model to localize tightly within that crop. The annotations actually land on the offending pixels.
+
+<p><a href="https://github.com/MoonCreativeLab/DriftCheck/" target="_blank" rel="noopener">DriftCheck is on GitHub</a>, open source under the MIT license.</p>
+
+<p>I wrote about how it fits into the workflow in <a href="/last-20-percent">The Last 20%</a>.</p>
+
+<p class="role-line"><strong>Role.</strong> Engineer. Designer.</p>
+
+</div>
