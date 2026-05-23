@@ -122,8 +122,13 @@ img { max-width: 100%; height: auto; }
   grid-template-areas: "site-title site-title site-title main-nav";
 }
 
-.nav-container:first-of-type {
+header .nav-container {
   margin-bottom: 14rem;
+}
+
+footer .nav-container {
+  margin-top: 6rem;
+  margin-bottom: 5.5rem;
 }
 
 .main-nav {
@@ -140,7 +145,12 @@ img { max-width: 100%; height: auto; }
 .site-title {
   grid-area: site-title;
   justify-self: right;
-  align-self: center;
+  align-self: end;
+}
+
+.site-title h1 {
+  margin: 0;
+  line-height: 1;
 }
 
 /* ---------- tiles (explore-more) ---------- */
@@ -193,7 +203,7 @@ img { max-width: 100%; height: auto; }
     "perma-tile perma-tile openbooth-tile openbooth-tile"
     "stereo-cam-tile stereo-cam-tile older-tile older-tile"
     "about-desc about-desc about-desc ."
-    "contact-desc contact-desc . .";
+    "contact-desc contact-desc contact-desc .";
 }
 
 .port-landing .intro-text { grid-area: intro-text; align-self: end; }

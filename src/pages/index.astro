@@ -9,7 +9,6 @@ const tiles = [
     alt: 'Dog Mode placeholder',
     title: 'Dog Mode',
     desc: 'A published iOS app that turns a Matter-compatible smart home into the ideal environment for your dog.',
-    roles: 'Product Designer. iOS Engineer.',
   },
   {
     cls: 'mcp-tile',
@@ -18,7 +17,6 @@ const tiles = [
     alt: 'Styling Drift MCP placeholder',
     title: 'Styling Drift MCP',
     desc: 'An MCP server that helps AI coding assistants catch styling drift as a React Native app evolves.',
-    roles: 'Engineer. Designer.',
   },
   {
     cls: 'perma-tile',
@@ -27,7 +25,6 @@ const tiles = [
     alt: 'Perma.cc logo',
     title: 'Perma.cc',
     desc: 'A web service used by courts, scholars, and journals to create permanent records of cited web sources.',
-    roles: 'Interaction Designer. Full Stack Developer. Product Designer.',
   },
   {
     cls: 'openbooth-tile',
@@ -36,16 +33,14 @@ const tiles = [
     alt: 'OpenBooth phone booth',
     title: 'OpenBooth',
     desc: 'A piece of occupiable furniture — a phone booth for open offices and libraries.',
-    roles: 'Product Designer. Industrial Designer.',
   },
   {
     cls: 'stereo-cam-tile',
     href: '/stereo-cam',
-    img: '/assets/stereo-cam/stereo-cam-proj.jpg',
+    img: '/assets/stereo-cam/stereo-cam-tile@2x.jpg',
     alt: 'Stereoscopic camera prototype',
     title: 'Stereoscopic Camera',
     desc: 'A four-lens digital camera built around an Arduino — capturing parallax-rich animated GIFs of ordinary scenes.',
-    roles: 'Engineer. Designer. Maker.',
   },
   {
     cls: 'older-tile',
@@ -54,7 +49,6 @@ const tiles = [
     alt: 'Generative pattern — older work',
     title: 'Older work',
     desc: 'A grab bag of smaller pieces — generative visuals, an ambient timer, and hand-drawn illustrations.',
-    roles: 'Designer. Developer. Illustrator.',
   },
 ];
 ---
@@ -76,7 +70,7 @@ const tiles = [
     <div id="work" class="work-text">
       <h2 class="section-title">Work</h2>
       <p class="end-element">
-        Here are some examples that I'm proud of - software, physical products and a few things that are hard to categorize.
+        Software, physical products, and a few things in between.
       </p>
     </div>
 
@@ -87,19 +81,13 @@ const tiles = [
         </a>
         <p class="tile-title"><a href={t.href}>{t.title}</a></p>
         <p>{t.desc}</p>
-        <p class="tile-desc">{t.roles}</p>
       </div>
     ))}
 
     <div id="about" class="about-desc">
       <h2 class="title section-title">About</h2>
       <p>
-        I'm excited to explore new ways of thinking and doing at the intersection
-        of human factors and technology — I hope to setup outposts in recently
-        charted lands.
-      </p>
-      <p>
-        I currently write software as a multi-disciplinary, senior engineer at
+        I currently write software as a Senior Design Engineer at
         <a href="https://www.mooncreativelab.com/" target="_blank">Moon Creative Lab</a>
         in Palo Alto, California. I arrived at Moon from
         <a href="https://publicgood.studio/" target="_blank">Public Good Studio</a> —
@@ -125,7 +113,7 @@ const tiles = [
         <a href="https://www.instagram.com/this_phillips/" target="_blank">Instagram</a>.
       </p>
       <p>
-        Drop me an email at <a href="mailto:matt@mattphillips.us">matt@mattphillips.us</a>.
+        Email me, <a href="mailto:matt@mattphillips.us">matt@mattphillips.us</a> to chat about new projects, opportunities, and collaborations.
       </p>
     </div>
   </div>
