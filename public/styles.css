@@ -167,7 +167,7 @@ footer .nav-container {
 .stereo-cam-tile { grid-area: stereo-cam-tile; }
 .older-tile { grid-area: older-tile; }
 
-.tile { margin-top: 4rem; }
+.tile { margin-top: 2rem; }
 
 .tile-title {
   font-family: 'Walsheim Medium', sans-serif;
@@ -216,6 +216,11 @@ footer .nav-container {
 .port-landing .older-tile {
   margin-bottom: 0;
   padding-bottom: 0;
+}
+
+.port-landing .stereo-cam-tile p:last-child,
+.port-landing .older-tile p:last-child {
+  margin-bottom: 0;
 }
 
 .port-landing .section-title {
@@ -308,14 +313,12 @@ footer .nav-container {
   display: block;
   width: 100%;
   margin-top: 2rem;
-  border-radius: 8px;
 }
 
 .case-study em { font-style: italic; }
 
 .case-study .sketch {
   margin: 2rem 0 1rem;
-  border-radius: 8px;
   overflow: hidden;
   background: #f7e8f6;
 }
@@ -443,7 +446,6 @@ footer .nav-container {
 
 .case-study .screenshot-grid img {
   width: 100%;
-  border-radius: 14px;
   display: block;
 }
 
@@ -451,7 +453,6 @@ footer .nav-container {
   display: block;
   width: 100%;
   margin-top: 2rem;
-  border-radius: 8px;
 }
 
 .case-study > img + .img-desc { margin-top: 0.5rem; }
