@@ -4,9 +4,10 @@ interface Props {
   description?: string;
   ogImage?: string;
   bodyClass?: string;
-  frontmatter?: { title?: string; description?: string; ogImage?: string };
+  frontmatter?: { title?: string; description?: string; ogImage?: string; bodyClass?: string };
 }
-const { title, description, ogImage, bodyClass, frontmatter } = Astro.props;
+const { title, description, ogImage, frontmatter } = Astro.props;
+const bodyClass = Astro.props.bodyClass ?? frontmatter?.bodyClass;
 
 const DEFAULT_TITLE = 'Matt Phillips';
 const DEFAULT_DESCRIPTION =

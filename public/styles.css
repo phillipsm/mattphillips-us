@@ -480,7 +480,28 @@ body:not(.port-landing) footer:hover {
 }
 
 .case-study > img + .img-desc { margin-top: 1em; }
-.case-study > img[src*="slicing"] + .img-desc { margin-top: -3rem; }
+
+.last-20-percent-page .case-study > img[src*="slicing"] + .img-desc {
+  margin-top: -7rem;
+}
+
+.last-20-percent-page .case-study .img-desc {
+  margin-bottom: 40px;
+}
+
+.last-20-percent-page .case-study > .img-desc {
+  margin-bottom: 80px;
+}
+
+.last-20-percent-page .case-study > img,
+.last-20-percent-page .case-study > video,
+.last-20-percent-page .case-study > .screenshot-grid {
+  margin-top: 80px;
+}
+
+.last-20-percent-page .case-study h2:not(:first-of-type) {
+  margin-top: calc(4rem + 30px);
+}
 
 .case-study .placeholder {
   font-family: 'Walsheim Thin', sans-serif;
