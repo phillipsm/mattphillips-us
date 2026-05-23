@@ -249,7 +249,7 @@ body:not(.port-landing) footer:hover {
     font-size: 1.2rem;
     margin-top: 6rem;
   }
-  .nav-container .main-nav { font-size: 1.0em; }
+  .nav-container .main-nav { font-size: 1.0em; padding-left: 1rem; }
   .nav-container:first-of-type {
     margin-top: -2rem;
     margin-bottom: 8rem;
