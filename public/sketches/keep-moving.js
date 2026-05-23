@@ -46,7 +46,7 @@ const keep_moving_sketch = ( sketch ) => {
 
     sketch.get_next_colors = () => {
         if ( !color_a ) {
-            color_a = sketch.color( '#' + sketch.random( available_colors ) );
+            color_a = sketch.color( '#' + sketch.random( [ 'e5b0ea', 'bd83ce' ] ) );
         } else {
             color_a = color_b;
         }

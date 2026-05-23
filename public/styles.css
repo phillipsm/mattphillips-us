@@ -489,14 +489,20 @@ body:not(.port-landing) footer:hover {
   margin-bottom: 40px;
 }
 
-.the-drift-page .case-study > .img-desc {
-  margin-bottom: 80px;
+.the-drift-page .case-study .visual-block .img-desc {
+  margin-bottom: 0;
+}
+
+.the-drift-page .case-study > .img-desc,
+.the-drift-page .case-study > .visual-block {
+  margin-bottom: 60px;
 }
 
 .the-drift-page .case-study > img,
 .the-drift-page .case-study > video,
-.the-drift-page .case-study > .screenshot-grid {
-  margin-top: 80px;
+.the-drift-page .case-study > .screenshot-grid,
+.the-drift-page .case-study > .visual-block {
+  margin-top: 60px;
 }
 
 .the-drift-page .case-study h2:not(:first-of-type) {
@@ -517,6 +523,18 @@ body:not(.port-landing) footer:hover {
 
 @media only screen and (max-width: 700px) {
   .case-study .screenshot-grid { grid-template-columns: repeat(2, 1fr); }
-  .case-study .app-meta { flex-direction: column; align-items: flex-start; gap: 1rem; }
+  .case-study .app-meta { gap: 1rem; }
   .case-study .lede { font-size: 1.4em; }
+
+  .the-drift-page .case-study > .img-desc,
+  .the-drift-page .case-study > .visual-block {
+    margin-bottom: 40px;
+  }
+
+  .the-drift-page .case-study > img,
+  .the-drift-page .case-study > video,
+  .the-drift-page .case-study > .screenshot-grid,
+  .the-drift-page .case-study > .visual-block {
+    margin-top: 40px;
+  }
 }
