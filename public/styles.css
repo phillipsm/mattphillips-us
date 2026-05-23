@@ -100,7 +100,7 @@ p a:visited {
 img { max-width: 100%; height: auto; }
 
 .img-desc {
-  margin: 1em 2em;
+  margin: 1em 2em 3rem;
   font-family: 'Walsheim Thin', sans-serif;
   font-size: .85em;
   text-align: center;
@@ -480,6 +480,7 @@ body:not(.port-landing) footer:hover {
 }
 
 .case-study > img + .img-desc { margin-top: 1em; }
+.case-study > img[src*="slicing"] + .img-desc { margin-top: -3rem; }
 
 .case-study .placeholder {
   font-family: 'Walsheim Thin', sans-serif;

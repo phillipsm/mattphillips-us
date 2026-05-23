@@ -19,22 +19,20 @@ Dog Mode is an app I built at Moon Creative Lab over the past several weeks with
 </div>
 <p class="img-desc">The four core screens of the Dog Mode iOS app.</p>
 
-## The slice
+## The Slice
 
 The first time I handed Claude a full-screen mockup and asked it to build, the result was slop. Functional, in the way a photocopy of a photocopy is functional: the shapes were correct, the labels were where they belonged, but the subtlety — the relationship between type sizes, the breath between elements, the specific shade of blue that had taken an afternoon to choose — had been averaged away. Whatever made the Figma mockup feel intentional was gone.
 
 The fix turned out to be smaller portions. Instead of feeding the whole screen, I started feeding slices: literal screen grabs of sections of the mockup. A navigation bar. A card. A settings row. Scoped, specific, buildable. Quality came back immediately.
 
-<div class="visual-placeholder">
-  <span class="visual-label">Visual 2 · to be added</span>
-  <p class="visual-desc">Side-by-side comparison. Left: a Dog Mode Figma mockup frame with visible crop/slice lines showing how it was divided into sections — annotate with numbers 1, 2, 3. Right: the corresponding built screen in the app. Caption: "Figma mockup sliced into sections for prompting / finished screen in production."</p>
-</div>
+<img src="/assets/last-20-percent/slicing.png" alt="Three sections of the Dog Mode Activity screen sliced for one-at-a-time prompting" />
+<p class="img-desc">An example of three slices, fed to the model one at a time.</p>
 
 What I was actually doing, I realized, was not using AI to design. I was using my design skills to define what good looked like in Figma, my engineering judgment to break the implementation into digestible pieces, and AI to execute each piece with precision. The model was fast and capable. The taste, the structure, the order of operations — those were mine.
 
 This is the workflow that gets you to 80%. The remaining 20% is harder, and it took me longer to see clearly.
 
-## The drift
+## The Drift
 
 The last 20% is where consistency lives — the spacing that's almost right, the type size that's close but not yours, the color that's a few points off the palette. These aren't bugs. They are drift. Drift is invisible until you're close enough to the finish line to feel it but not quite see it, and once you can see it, you can never unsee it.
 
@@ -62,7 +60,7 @@ The insight underneath is embarrassingly simple. If you can write down what good
 
 There is something pleasing about handing a coding agent a checklist of every place it has cut a corner. The model, for its part, doesn't mind. It corrects, re-screenshots, hands the new image back to the linter, and continues until the report comes back empty. It can run a hundred small revisions before lunch. The work that used to die quietly in design review — the half-pixel adjustments, the type-ramp violations no one quite has the energy to flag — now gets caught in the loop where the code is being written, before it has time to harden.
 
-## What I learned
+## What I Learned
 
 The quality of an AI-assisted build is a direct function of the quality of the input — not just the prompt, but the judgment behind it. Knowing how to scope a prompt is an engineering skill. Knowing what crisp looks like is a design skill. The model has neither.
 
