@@ -1,9 +1,9 @@
 ---
 layout: ../layouts/BaseLayout.astro
-bodyClass: last-20-percent-page
+bodyClass: the-drift-page
 title: The Drift — Matt Phillips
 description: Notes on shipping Dog Mode with Claude Opus 4.6 — the methodology that got me to 80%, and DriftCheck, the visual linter that got me through the last 20%.
-ogImage: /og-last-20-percent.jpg
+ogImage: /og-the-drift.jpg
 ---
 
 <div class="case-study">
@@ -26,7 +26,7 @@ The first time I handed Claude a full-screen mockup and asked it to build, the r
 
 The fix turned out to be smaller portions. Instead of feeding the whole screen, I started feeding slices: literal screen grabs of sections of the mockup. A navigation bar. A card. A settings row. Scoped, specific, buildable. Quality came back immediately.
 
-<img src="/assets/last-20-percent/slicing.png" alt="Three sections of the Dog Mode Activity screen sliced for one-at-a-time prompting" />
+<img src="/assets/the-drift/slicing.png" alt="Three sections of the Dog Mode Activity screen sliced for one-at-a-time prompting" />
 <p class="img-desc">An example of three slices, fed to the model one at a time.</p>
 
 What I was actually doing, I realized, was not using AI to design. I was using my design skills to define what good looked like in Figma, my engineering judgment to break the implementation into digestible pieces, and AI to execute each piece with precision. The model was fast and capable. The taste, the structure, the order of operations — those were mine.
@@ -55,7 +55,7 @@ DriftCheck is the half of this story I'd be happiest to talk about. It runs two 
 The insight underneath is embarrassingly simple. If you can write down what good looks like, you can teach a machine to flag where things fall short. The hard part isn't the tool. The hard part is having enough taste to define the standard in the first place, and the discipline to put it on paper.
 
 <video muted autoplay loop playsinline>
-  <source src="/assets/last-20-percent/design-md.mp4" type="video/mp4" />
+  <source src="/assets/the-drift/design-md.mp4" type="video/mp4" />
 </video>
 <p class="img-desc">The Dog Mode design.md — what good looks like, written down.</p>
 
