@@ -151,6 +151,18 @@ footer .nav-container {
 .site-title h1 {
   margin: 0;
   line-height: 1;
+  transform: translateY(2px);
+}
+
+body:not(.port-landing) header,
+body:not(.port-landing) footer {
+  opacity: 0.35;
+  transition: opacity 0.2s ease;
+}
+
+body:not(.port-landing) header:hover,
+body:not(.port-landing) footer:hover {
+  opacity: 1;
 }
 
 /* ---------- tiles (explore-more) ---------- */
@@ -408,7 +420,7 @@ footer .nav-container {
   display: flex;
   align-items: center;
   gap: 1.5rem;
-  margin-bottom: 2.5rem;
+  margin-bottom: 8rem;
 }
 
 .case-study .app-icon {
@@ -439,10 +451,13 @@ footer .nav-container {
 
 .case-study .screenshot-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
   margin: 2.5rem 0 3rem;
 }
+
+.case-study .screenshot-grid:has(+ .img-desc) { margin-bottom: 0; }
+.case-study .screenshot-grid + .img-desc { margin-top: 0.5rem; }
 
 .case-study .screenshot-grid img {
   width: 100%;
@@ -453,6 +468,14 @@ footer .nav-container {
   display: block;
   width: 100%;
   margin-top: 2rem;
+}
+
+.case-study > img:first-of-type {
+  margin-bottom: 8rem;
+}
+
+.case-study > img:first-of-type:has(+ .app-meta) {
+  margin-bottom: 2rem;
 }
 
 .case-study > img + .img-desc { margin-top: 0.5rem; }

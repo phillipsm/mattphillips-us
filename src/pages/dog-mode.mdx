@@ -2,6 +2,7 @@
 layout: ../layouts/BaseLayout.astro
 title: Dog Mode — Matt Phillips
 description: A published iOS app that tunes a Matter-compatible smart home for your dog. Shipped through Moon Creative Lab, built with Claude Code as the primary engineer.
+ogImage: /og-dog-mode.jpg
 ---
 
 <div class="case-study">
@@ -10,24 +11,22 @@ description: A published iOS app that tunes a Matter-compatible smart home for y
 
 <p class="lede">Your home, optimized for your dog.</p>
 
+<img src="/assets/dog-mode/dog-mode-tile@2x.jpg" alt="Dog Mode — illustrated cozy room scene with a happy dog under a warm lamp" />
+
 <div class="app-meta">
   <img src="/assets/dog-mode/AppIcon.png" alt="Dog Mode app icon" class="app-icon" />
   <div class="app-meta-text">
-    <p>A published iOS app, shipped through <a href="https://www.mooncreativelab.com">Moon Creative Lab</a>.</p>
-    <p><a href="https://apps.apple.com" class="cta">Download on the App Store →</a></p>
+    <p>A published iOS app, <a href="https://apps.apple.com/us/app/dog-mode-smart-home/id6761276925" class="cta">Download on the App Store →</a></p>
   </div>
 </div>
 
+[Hannah Franklin](mailto:hannah.franklin@mooncreativelab.com), an Entrepreneur in Residence, arrived at Moon Creative Lab recently with a simple idea: Google Home for dogs. We started with hardware — smart scent diffusers and related Smart Home controllers. Then we pivoted to something more immediate: a single-tap mobile app that sets your lights, temperature, blinds, and audio to conditions that keep your dog calm and comfortable while you're away. I built that app — Dog Mode — over the past several weeks and we published it on the Apple App Store.
+
 ## The product
 
-Dog Mode uses Google Home's open APIs to automatically adjust your lights, thermostat, TV, and sound devices — creating the perfect environment for your dog whenever you're away.
+Dog Mode sets your smart home to dog-friendly conditions when you leave. One tap and the environment shifts — climate, light, video, sound — to keep your dog comfortable and engaged while you're out. When you're back, one tap puts everything back where it was.
 
-The app connects to Matter-compatible smart home devices through Google Home. With one tap, it creates a custom environment tailored to your dog:
-
-- **Climate.** Ideal temperature based on your dog's breed and size, or off entirely.
-- **Light.** Optimized levels and tones designed for dogs.
-- **Sight.** Dynamic nature content that keeps your dog mentally stimulated.
-- **Sound.** Music and natural soundscapes on a comforting daily rhythm.
+It works through Google Home's open APIs. Any Matter-compatible device already paired with your Home — thermostats, smart bulbs, TVs, smart speakers — is automatically discoverable. There's no separate hub, no second setup flow. If Google Home runs your house, Dog Mode runs your house for your dog.
 
 <div class="screenshot-grid">
   <img src="/assets/dog-mode/IMG_3189.PNG" alt="Dog Mode app screen" />
@@ -36,9 +35,15 @@ The app connects to Matter-compatible smart home devices through Google Home. Wi
   <img src="/assets/dog-mode/IMG_3193.PNG" alt="Dog Mode app screen" />
 </div>
 
+## How it's built
+
+Dog Mode is a React Native iOS app. The interface layer is TypeScript; smart-home control runs through a thin Swift bridge to the Google Home iOS SDK. Devices appear automatically because Google Home is already the source of truth for the user's home.
+
+iOS 17 or later, Google Home account required. Available on the [App Store](https://apps.apple.com/us/app/dog-mode-smart-home/id6761276925).
+
 ## Building with AI
 
-Almost as important as the app itself is *how* I built it. Dog Mode is the first product I've taken end-to-end with AI coding tools in the driver's seat — Claude Code as the primary engineer, with me as the designer, reviewer, and editor.
+Almost as interesting as the app is *how* I built it. Dog Mode is the first product I've taken end-to-end with AI coding tools in the driver's seat — Claude Code as the primary engineer, with me as the product designer, reviewer, and editor.
 
 Along the way I built [DriftCheck](/driftcheck) — a tool that catches design-system drift as the model writes code, so consistency is enforced in the loop rather than patched up later.
 
