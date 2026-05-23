@@ -1,6 +1,7 @@
 ---
 layout: ../layouts/BaseLayout.astro
 title: Stereoscopic Camera — Matt Phillips
+description: A four-lens digital camera built around an Arduino, housed in a laser-cut acrylic shell — capturing parallax-rich animated views of ordinary scenes.
 ---
 
 <div class="case-study">
@@ -18,13 +19,8 @@ We see in stereo. Two eyes, two slightly offset images, a brain that fuses them 
 
 This camera has four. They fire simultaneously when the shutter is pressed, capturing four images of the same moment from four slightly different vantage points. On paper, those frames could be combined with [lenticular printing](https://en.wikipedia.org/wiki/Lenticular_printing). On the web, an animated GIF gets you something similar — a flickering, parallax-rich view of an ordinary scene.
 
-<div class="screenshot-grid">
-  <img src="/assets/stereo-cam/table-blue.gif" alt="Animated stereo view, blue cast" />
-  <img src="/assets/stereo-cam/table-orange.gif" alt="Animated stereo view, orange cast" />
-  <img src="/assets/stereo-cam/table-purple.gif" alt="Animated stereo view, purple cast" />
-  <img src="/assets/stereo-cam/table-green.gif" alt="Animated stereo view, green cast" />
-</div>
-<p class="img-desc">Multicolor view of the day's workspace — four passes through the same moment.</p>
+<img src="/assets/stereo-cam/shopping.gif" alt="A four-frame stereoscopic capture in a supermarket aisle." />
+<p class="img-desc">A four-frame capture in a supermarket shows the camera's 3D effect.</p>
 
 ## How it's built
 
@@ -42,6 +38,14 @@ The prototype is four cameras wired to an Arduino microcontroller, writing to an
 ## Build your own
 
 The Arduino source is on [GitHub](https://github.com/phillipsm/stereo-cam) under a dual MIT/GPL license, along with the [laser-cutting templates](https://github.com/phillipsm/stereo-cam/tree/master/templates) for the acrylic plates.
+
+<div class="screenshot-grid">
+  <img src="/assets/stereo-cam/table-blue.gif" alt="Animated stereo view, blue cast" />
+  <img src="/assets/stereo-cam/table-orange.gif" alt="Animated stereo view, orange cast" />
+  <img src="/assets/stereo-cam/table-purple.gif" alt="Animated stereo view, purple cast" />
+  <img src="/assets/stereo-cam/table-green.gif" alt="Animated stereo view, green cast" />
+</div>
+<p class="img-desc">Multicolor view of the day's workspace — four passes through the same moment.</p>
 
 <p class="role-line"><strong>Role.</strong> Engineer. Designer. Maker.</p>
 
