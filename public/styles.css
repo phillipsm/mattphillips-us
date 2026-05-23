@@ -505,6 +505,10 @@ body:not(.port-landing) footer:hover {
   margin-top: 60px;
 }
 
+.the-drift-page .case-study h2:first-of-type {
+  margin-top: calc(4rem + 20px);
+}
+
 .the-drift-page .case-study h2:not(:first-of-type) {
   margin-top: calc(4rem + 30px);
 }
