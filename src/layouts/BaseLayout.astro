@@ -27,6 +27,7 @@ const ogImageUrl = new URL(pageOgImage, Astro.site).toString();
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="theme-color" content="#ffffff" />
     <link rel="icon" href="/assets/images/favicon-32.png" sizes="32x32" />
     <link rel="icon" href="/assets/images/favicon-192.png" sizes="192x192" />
     <link rel="apple-touch-icon" href="/assets/images/favicon-180.png" />
@@ -47,6 +48,34 @@ const ogImageUrl = new URL(pageOgImage, Astro.site).toString();
     <meta name="twitter:title" content={pageTitle} />
     <meta name="twitter:description" content={pageDescription} />
     <meta name="twitter:image" content={ogImageUrl} />
+
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Matt Phillips",
+      "url": "https://mattphillips.us",
+      "image": "https://mattphillips.us/og-image.jpg",
+      "jobTitle": "Senior Design Engineer",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Moon Creative Lab",
+        "url": "https://www.mooncreativelab.com/"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Palo Alto",
+        "addressRegion": "CA",
+        "addressCountry": "US"
+      },
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "Virginia Tech"
+      },
+      "sameAs": [
+        "https://github.com/phillipsm",
+        "https://www.instagram.com/this_phillips/"
+      ]
+    })} />
 
     <link rel="preload" href="/assets/fonts/GT-Walsheim-Regular.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="/assets/fonts/GT-Walsheim-Medium.woff2" as="font" type="font/woff2" crossorigin />
