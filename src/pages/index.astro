@@ -55,7 +55,7 @@ const tiles = [
 <BaseLayout title="Matt Phillips" bodyClass="port-landing">
   <div class="container">
     <div class="about-img">
-      <img src="/assets/images/double-exposure-still-low-opacity.gif" alt="" />
+      <img src="/assets/images/double-exposure-still-low-opacity.gif" alt="" width="1000" height="1000" />
     </div>
 
     <div class="intro-text">
@@ -77,7 +77,7 @@ const tiles = [
     {tiles.map(t => (
       <div class={`${t.cls} tile`}>
         <a href={t.href} class="tile-link">
-          <img src={t.img} alt={t.alt} />
+          <img src={t.img} alt={t.alt} width="2200" height="1600" loading="lazy" />
         </a>
         <p class="tile-title"><a href={t.href}>{t.title}</a></p>
         <p>{t.desc}</p>
