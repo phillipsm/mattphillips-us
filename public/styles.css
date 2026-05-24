@@ -250,9 +250,14 @@ body:not(.port-landing) footer:hover {
     margin-top: 6rem;
   }
   .nav-container .main-nav { font-size: 1.0em; padding-left: 1rem; }
-  .nav-container:first-of-type {
+  header .nav-container {
     margin-top: -2rem;
     margin-bottom: 8rem;
+  }
+  body { margin-bottom: 0; }
+  footer .nav-container {
+    margin-top: 6rem;
+    margin-bottom: 2rem;
   }
 
   .section-title {
@@ -405,6 +410,8 @@ body:not(.port-landing) footer:hover {
 @media only screen and (max-width: 700px) {
   .older-work-page .tile-grid .tile { flex: 0 0 100%; }
   .older-work-page .lede { font-size: 1.4em; }
+
+  header .nav-container .site-title { justify-self: left; }
 }
 
 .case-study p { margin-bottom: 1.2em; line-height: 1.5em; }
