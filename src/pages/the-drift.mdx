@@ -52,7 +52,7 @@ That little bit of drift in the UI is what causes a product to go from looking p
   </div>
 </div>
 
-DriftCheck accepts a <a href="https://stitch.withgoogle.com/docs/design-md/specification" target="_blank" rel="noopener noreferrer">DESIGN.md file</a> and a screen capture of your interface, and returns an annotated image — translucent amber strokes over each region that has drifted — plus a JSON report of the same findings.
+DriftCheck is a visual linter for LLM-assisted UI work. It accepts a <a href="https://stitch.withgoogle.com/docs/design-md/specification" target="_blank" rel="noopener noreferrer">DESIGN.md</a> file and a screen capture of your interface, and returns an annotated image — translucent amber strokes over each region that has drifted, plus a JSON report of the same findings.
 
 You can run it in two ways: as a standalone CLI, or install it as an MCP server so that your coding agent can perform visual QA in your dev loop. It's especially useful at the CI layer to flag drift before it gets merged into production.
 
