@@ -12,7 +12,7 @@ ogImage: /og-the-drift.jpg
 
 <p class="byline">an essay, <span class="byline-date">May 2026</span></p>
 
-Dog Mode is a mobile app I built at <a href="https://www.mooncreativelab.com/" target="_blank" rel="noopener noreferrer">Moon Creative Lab</a> over the past several weeks with <a href="mailto:hannah.franklin@mooncreativelab.com" target="_blank" rel="noopener noreferrer">Hannah Franklin</a>, an Entrepreneur in Residence who arrived with a one-line idea: Google Home, but for your dog.
+Google Home, but for your dog. That was the whole brief. One line, from an Entrepreneur in Residence named <a href="mailto:hannah.franklin@mooncreativelab.com" target="_blank" rel="noopener noreferrer">Hannah Franklin</a>, and it was enough.
 
 We started with hardware — the world's first <a href="https://en.wikipedia.org/wiki/Matter_(standard)" target="_blank" rel="noopener noreferrer">Matter Smart Home</a> scent diffuser and supporting controllers. Then, we remembered hardware is hard, and in this case a little too narrow, so we pivoted to something more immediate: a single tap on a phone that sets your home's lights, temperature, blinds, and audio to the conditions a dog finds soothing while you're away.
 
@@ -28,7 +28,7 @@ We started with hardware — the world's first <a href="https://en.wikipedia.org
 
 The result was total slop, the first time I handed Claude (<a href="https://www.anthropic.com/news/claude-opus-4-6" target="_blank" rel="noopener noreferrer">Opus 4.6</a>) a hi-fi Figma mockup and asked it to build the React Native screen in TypeScript. A photocopy of a photocopy — the shapes were correct, the labels were where they belonged, but there was no attention to detail; the relationship between type sizes, the spacing between elements, the specific shade of blue that clicked with me — the machine just averaged them away.
 
-I quickly realized I needed to throttle the LLM. Scope its work. Dole out my asks to the mighty beast. Instead of passing in the whole screen, I started feeding slices: literal screen grabs of sections of the mockup. A navigation bar. A card. A settings row. Scoped, specific, buildable. Quality came back immediately.
+I quickly realized I needed to throttle the LLM. Scope its work. Dole out my requests to the mighty beast. Instead of passing in the whole screen, I started feeding slices: literal screen grabs of sections of the mockup. A navigation bar. A card. A settings row. Scoped, specific, buildable. Quality came back immediately.
 
 <img src="/assets/the-drift/slicing.png" alt="Three sections of the Dog Mode Activity screen sliced for one-at-a-time prompting" width="3116" height="1026" loading="lazy" />
 <p class="img-desc">An example of three slices, fed to the model one at a time.</p>
@@ -64,7 +64,7 @@ You can run it in two ways: as a standalone CLI, or install it as an MCP server 
 <p class="img-desc">The Dog Mode DESIGN.md — what good looks like, written down.</p>
 
 
-## In Summary
+## The Point
 
 The quality of an AI-assisted build is a direct function of the quality of the input — not just the prompt, but the judgment behind it. Be thoughtful in the slices you're giving to the vision model. Be precise in the prompt. And, QA the output as you build.
 
