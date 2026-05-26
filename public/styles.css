@@ -314,6 +314,28 @@ body:not(.port-landing) footer:hover {
 
 .case-study h1 { margin-bottom: 0.5rem; }
 
+.case-study h1:has(+ .byline) { margin-bottom: 0; }
+
+.case-study .byline {
+  font-family: 'Walsheim Light', sans-serif;
+  font-size: 0.95em;
+  line-height: 1.5em;
+  color: rgba(0, 0, 0, 0.55);
+  margin-top: -0.25rem;
+  margin-bottom: 3rem;
+}
+
+.case-study .byline .byline-by {
+  font-variant: small-caps;
+  letter-spacing: 0.14em;
+  margin-right: 0.15em;
+}
+
+.case-study .byline .byline-date {
+  font-size: 0.9em;
+  color: rgba(0, 0, 0, 0.45);
+}
+
 .case-study h2 {
   margin-top: 4rem;
   margin-bottom: 1.5rem;
