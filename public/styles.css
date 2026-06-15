@@ -235,8 +235,17 @@ body:not(.port-landing) footer:hover {
   margin-bottom: 0;
 }
 
-.port-landing .section-title {
+/* Top spacing lives on the section containers (the scroll anchors) rather than
+   the title, so jumping to #work/#about/#contact lands the title at the top
+   instead of below an 8rem gap. */
+.port-landing .work-text,
+.port-landing .about-desc,
+.port-landing .contact-desc {
   margin-top: 8rem;
+  scroll-margin-top: 2rem;
+}
+
+.port-landing .section-title {
   margin-bottom: 2rem;
 }
 
@@ -260,8 +269,13 @@ body:not(.port-landing) footer:hover {
     margin-bottom: 2rem;
   }
 
-  .section-title {
+  .port-landing .work-text,
+  .port-landing .about-desc,
+  .port-landing .contact-desc {
     margin-top: 4rem;
+  }
+
+  .section-title {
     margin-bottom: 2rem;
   }
 
