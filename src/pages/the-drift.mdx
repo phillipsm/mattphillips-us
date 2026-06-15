@@ -12,9 +12,9 @@ ogImage: /og-the-drift.jpg
 
 <p class="byline">An essay, May 2026</p>
 
-Google Home, but for your dog. That was the whole brief. One line, from an Entrepreneur in Residence named <a href="mailto:hannah.franklin@mooncreativelab.com" target="_blank" rel="noopener noreferrer">Hannah Franklin</a>, and it was enough.
+Google Home, but for your dog. That was the whole brief. One line, from an Entrepreneur in Residence named <a href="mailto:hannah.franklin@mooncreativelab.com">Hannah Franklin</a>, and it was enough.
 
-We started with hardware — the world's first <a href="https://en.wikipedia.org/wiki/Matter_(standard)" target="_blank" rel="noopener noreferrer">Matter Smart Home</a> scent diffuser and supporting controllers. Then, we remembered hardware is hard, and in this case a little too narrow, so we pivoted to something more immediate: a single tap on a phone that sets your home's lights, temperature, blinds, and audio to the conditions a dog finds soothing while you're away.
+We started with hardware — the world's first <a href="https://en.wikipedia.org/wiki/Matter_(standard)" target="_blank" rel="noopener noreferrer">Matter smart home</a> scent diffuser and supporting controllers. Then, we remembered hardware is hard, and in this case a little too narrow, so we pivoted to something more immediate: a single tap on a phone that sets your home's lights, temperature, blinds, and audio to the conditions a dog finds soothing while you're away.
 
 <div class="screenshot-grid">
   <img src="/assets/dog-mode/IMG_3189.PNG" alt="Dog Mode app screen" width="1320" height="2868" />
@@ -39,7 +39,7 @@ The model was fast and capable. The design, the understanding of the underlying 
 
 The last 20% — the spacing that's almost right, the type size that's close but inconsistent, the color that's a few points off the palette. The accretion of bugs from the statistical model. They are drift.
 
-That little bit of drift in the UI is what causes a product to go from looking pro and tight, to one that looks like it was carelessly constructed. I don't want to be part of the AI slopfest, so I built a tool called <a href="/driftcheck" target="_blank" rel="noopener noreferrer">DriftCheck</a> to chop the slop at each hop. 😆
+That little bit of drift in the UI is what causes a product to go from looking pro and tight, to one that looks like it was carelessly constructed. I don't want to be part of the AI slopfest, so I built a tool called <a href="/driftcheck">DriftCheck</a> to chop the slop at each hop.
 
 <div class="visual-block" style="display: flex; gap: 32px; align-items: stretch;">
   <div style="flex: 1; min-width: 0; display: flex; flex-direction: column;">
@@ -52,7 +52,7 @@ That little bit of drift in the UI is what causes a product to go from looking p
   </div>
 </div>
 
-DriftCheck is a visual linter for LLM-assisted UI work. It accepts a <a href="https://stitch.withgoogle.com/docs/design-md/specification" target="_blank" rel="noopener noreferrer">DESIGN.md</a> file and a screen capture of your interface, and returns an annotated image — translucent amber strokes over each region that has drifted, plus a JSON report of the same findings.
+DriftCheck is a visual linter for LLM-assisted UI work. It accepts a <a href="https://stitch.withgoogle.com/docs/design-md/specification" target="_blank" rel="noopener noreferrer">design.md</a> file and a screen capture of your interface, and returns an annotated image — translucent amber strokes over each region that has drifted, plus a JSON report of the same findings.
 
 You can run it in two ways: as a standalone CLI, or install it as an MCP server so that your coding agent can perform visual QA in your dev loop. It's especially useful at the CI layer to flag drift before it gets merged into production.
 
@@ -61,7 +61,7 @@ You can run it in two ways: as a standalone CLI, or install it as an MCP server 
 <video muted autoplay loop playsinline>
   <source src="/assets/the-drift/design-md.mp4" type="video/mp4" />
 </video>
-<p class="img-desc">The Dog Mode DESIGN.md — what good looks like, written down.</p>
+<p class="img-desc">The Dog Mode design.md — what good looks like, written down.</p>
 
 
 ## The Point
@@ -70,6 +70,6 @@ The quality of an AI-assisted build is a direct function of the quality of the i
 
 Read more about Dog Mode at <a href="https://dogmode.mooncreativelab.com/" target="_blank" rel="noopener noreferrer">dogmode.mooncreativelab.com</a> and make your best pal happier in your home by downloading <a href="https://apps.apple.com/us/app/dog-mode-smart-home/id6761276925" target="_blank" rel="noopener noreferrer">the app in the Apple App Store</a>.
 
-<a href="/driftcheck" target="_blank" rel="noopener noreferrer">DriftCheck</a> is open source and freely available, so please give it a try!
+<a href="/driftcheck">DriftCheck</a> is open source and freely available, so please give it a try!
 
 </div>

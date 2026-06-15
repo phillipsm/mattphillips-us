@@ -1,7 +1,7 @@
 ---
 layout: ../layouts/BaseLayout.astro
 title: Dog Mode — Matt Phillips
-description: A published iOS app that tunes a Matter-compatible smart home for your dog. Shipped through Moon Creative Lab, built with Claude Code as the primary engineer.
+description: A published iOS app that tunes a Matter-compatible smart home for your dog. Shipped through Moon Creative Lab, designed and built with Claude Code assisting.
 ogImage: /og-dog-mode.jpg
 ---
 
@@ -16,19 +16,19 @@ ogImage: /og-dog-mode.jpg
 <div class="app-meta">
   <img src="/assets/dog-mode/AppIcon.png" alt="Dog Mode app icon" class="app-icon" width="512" height="512" loading="lazy" />
   <div class="app-meta-text">
-    <p>A published iOS app, <a href="https://apps.apple.com/us/app/dog-mode-smart-home/id6761276925" class="cta">Download on the App Store</a></p>
+    <p>A published iOS app, <a href="https://apps.apple.com/us/app/dog-mode-smart-home/id6761276925" class="cta" target="_blank" rel="noopener noreferrer">Download on the App Store</a></p>
   </div>
 </div>
 
 Dog Mode began as a one-line brief from [Hannah Franklin](mailto:hannah.franklin@mooncreativelab.com), an Entrepreneur in Residence at Moon Creative Lab: Google Home, but for your dog.
 
-We chased that idea into hardware first — the world's first <a href="https://en.wikipedia.org/wiki/Matter_(standard)" target="_blank" rel="noopener noreferrer">Matter</a> Smart Home scent diffuser and a set of supporting controllers, purpose-built for pets. But hardware is slow to build and, here, a little too narrow, so we quickly retried and hit on something that stuck: a single tap that sets your home's lights, temperature, blinds, and video/audio to the conditions a dog finds soothing. I quickly built that app, Dog Mode, and we published it in the [Apple App Store](https://apps.apple.com/us/app/dog-mode-smart-home/id6761276925) in May 2026.
+We chased that idea into hardware first — the world's first <a href="https://en.wikipedia.org/wiki/Matter_(standard)" target="_blank" rel="noopener noreferrer">Matter</a> smart home scent diffuser and a set of supporting controllers, purpose-built for pets. But hardware is slow to build, and here it was a little too narrow. So we changed course and hit on something that stuck: a single tap that sets your home's lights, temperature, blinds, and video and audio to the conditions a dog finds soothing. I quickly built that app, Dog Mode, and we published it in the [Apple App Store](https://apps.apple.com/us/app/dog-mode-smart-home/id6761276925) in May 2026.
 
 ## The Product
 
 Dog Mode sets your smart home to dog-friendly conditions when you leave. One tap and the environment shifts — climate, light, video, sound — to keep your dog comfortable and engaged while you're out. When you're back, one tap puts everything back where it was.
 
-It can be triggered by the dog or the human! The dog gets a wireless button mounted to the wall that they can press, and human gets control on their phone.
+It can be triggered by the dog or the human. The dog gets a wireless button mounted to the wall that they can press, and the human gets control on their phone.
 
 It works through Google Home's SDK and allows control of devices already paired with your Home — thermostats, smart bulbs, TVs, smart speakers and many more. There's no separate hub, no second setup flow. If Google Home runs your house, Dog Mode runs your house for your dog.
 
@@ -38,7 +38,7 @@ It works through Google Home's SDK and allows control of devices already paired 
     <source src="/assets/dog-mode/dog-mode-button-demo.mp4" type="video/mp4" />
   </video>
 </div>
-<p class="img-desc">The 3D-printed button, and an early demo of Dog Mode be used in a demo space.</p>
+<p class="img-desc">The 3D-printed button, and an early demo of Dog Mode in use.</p>
 
 ## How It's Built
 
@@ -56,7 +56,7 @@ iOS 17 or later, Google Home account required. Available on the [App Store](http
 
 ## Building With AI
 
-Dog Mode is the first mobile app (React Native) I built with an LLM assisting — I learned a bunch of efficiency lessons, and found some limits of Opus 4.8 in Claude Code. 
+Dog Mode is the first mobile app (React Native) I built with an LLM assisting — I learned a bunch of efficiency lessons, and found some limits of Opus 4.6 in Claude Code. 
 
 Along the way I built [DriftCheck](/driftcheck) — a tool that catches design-system drift as the model writes code, so consistency is enforced in the loop rather than patched up later.
 
